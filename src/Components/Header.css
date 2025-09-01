@@ -1,0 +1,26 @@
+.link {
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  white-space: nowrap;
+  color: white;
+}
+
+/* base underline (hidden) */
+.link--dia::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;                /* adjust underline position */
+  width: 100%;
+  height: 3px;                 /* underline thickness */
+  background: #f1660abf;
+  transform: scaleX(0);        /* start hidden */
+  transform-origin: left center; /* grow from left to right */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* animate on hover */
+.link--dia:hover::after {
+  transform: scaleX(1);        /* expand fully */
+}
