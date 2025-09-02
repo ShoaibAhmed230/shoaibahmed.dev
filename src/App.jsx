@@ -11,9 +11,9 @@ function App() {
   return (
 <div>
 <Header />
+<h1 className='text-white'> 2test</h1>
 <HeroSection />
 
-<h1> test</h1>
 
 </div>
   )
