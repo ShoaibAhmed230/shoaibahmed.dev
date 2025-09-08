@@ -1,0 +1,17 @@
+.abt-box{
+    box-shadow: rgb(255 255 255 / 17%) 0px -23px 25px 0px inset, rgb(255 255 255 / -29%) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -88px 52px 0px inset, rgb(255 255 255 / 14%) 0px 2px 1px, rgb(255 255 255 / 77%) 0px 0px 2px, rgb(255 255 255 / -10%) 10px 18px 10px, rgb(255 255 255 / -11%) -29px -41px 1px, rgb(255 255 255 / 14%) 0px 9px 11px;
+}
+
+.side-img-box{
+    width: 254px;
+    border-radius: 123px;
+}
+
+.side-img-box img{
+  -webkit-mask-image: linear-gradient(to right, black 16%, transparent 121%),
+  linear-gradient(to left, black 65%, transparent 100%),
+  linear-gradient(to bottom, black 52%, transparent 102%),
+  linear-gradient(to top, black 27%, transparent 103%);
+  -webkit-mask-composite: destination-in;
+
+}
