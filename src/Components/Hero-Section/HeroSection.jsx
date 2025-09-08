@@ -17,9 +17,10 @@ export const HeroSection = () => {
 
         {/* TEXT - show second on mobile, first on desktop */}
         <div className="order-2 md:order-1 lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center md:items-start mb-16 md:mb-0  text-center">
-          <h1 className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500 via-red-500 to-pink-500 text-transparent bg-clip-text title-font sm:text-4xl text-3xl mb-4 font-bold >
+          <h1 className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500 via-red-500 to-pink-500 text-transparent bg-clip-text title-font sm:text-4xl text-3xl mb-4 font-bold" >
             I'm Shoaib Ahmed
-            <br className="hidden lg:inline-block" />Frontend Developer
+            <br className="hidden lg:inline-block" />
+            Frontend Developer
           </h1>
           <p className="text-white text-xl text-center md:text-left mb-8 leading-relaxed w-3/4">
           Turning ideas into responsive, high-performing websites.
