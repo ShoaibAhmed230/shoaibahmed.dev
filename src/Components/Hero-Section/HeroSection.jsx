@@ -27,7 +27,7 @@ export const HeroSection = () => {
           </p>
           <div className="flex justify-center">
             <button
-              id="contact-btn"
+              // id="contact"
               className=" relative inline-flex items-center justify-start overflow-hidden
   font-medium transition-all text-white bg-orange-600 rounded
   hover:bg-white group py-2 px-6
