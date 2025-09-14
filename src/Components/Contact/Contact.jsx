@@ -13,15 +13,17 @@ export const Contact = () => {
     })
 
     const [status, setStatus] = useState("")
+    const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
         console.log('text');
-
+        
     }
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoading(true)
 
 
         emailjs
@@ -35,10 +37,21 @@ export const Contact = () => {
                 () => {
                     setStatus("✅ Message sent successfully!");
                     setForm({ name: "", email: "", phone: "", message: "" })
+                    setLoading(false);
+
+                    setTimeout(()=> {
+                        setStatus("");
+                    }, 5000)
+
                 },
             (error) => {
                     setStatus("❌ Failed to send message. Try again.");
                     console.error(error)
+                    setLoading(false);
+
+                    setTimeout(() => {
+                        setStatus("")
+                    }, 5000);
                 }
             )
         
@@ -103,13 +116,25 @@ export const Contact = () => {
                         {/* Button */}
                         <div className="md:col-span-2 flex justify-end">
                             <button
+                                className={`px-6 py-2 bg-orange-600 hover:bg-orange-700 rounded text-white font-semibold transition ${
+                                    loading
+                                    ? "bg-gray-500 cursor-not-allowed"
+                                    : "bg-orange-600 hover:bg-orange-700"
+                                }`}
                                 type="submit"
-                                className="px-6 py-2 bg-orange-600 hover:bg-orange-700 rounded text-white font-semibold transition"
+                                disabled={loading}
                             >
-                                Send
+                                {loading ? "Sending..." : "Send"}
                             </button>
                         </div>
                     </form>
+                    {/* Loader / Status*/}
+                    {loading && (
+                        <div className="mt-4 flex justify-center">
+                            <div className="w-6 h-6 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+                        </div>
+                    )}
+
                     {status && <p className='text-center mt-4'>{status}</p>}
                 </div>
             </section></div>
