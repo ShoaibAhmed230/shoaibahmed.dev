@@ -1,5 +1,6 @@
 import React from 'react'
-import shImg from '../../assets/Images/s-side-img.png'
+// import shImg from '../../assets/Images/s-side-img.png'
+import shImg from '../../assets/Images/shoaib-side-photo2.jpg'
 import './About.css'
 import '../Header/Header.css'
 import '../../assets/Theme/Theme.css';
