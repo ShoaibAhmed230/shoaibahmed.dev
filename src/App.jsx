@@ -2,7 +2,7 @@ import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import { Head } from "react-head";
+import  Head  from "react-head";
 import { Header } from './Components/Header/Header'
 import { HeroSection } from './Components/Hero-Section/HeroSection'
 import { About } from './Components/About/About'
@@ -11,7 +11,9 @@ import { Footer } from './Components/Footer/Footer'
 import { Contact } from './Components/Contact/Contact'
 
 function App() {
-  //  Use dynamic origin so it works on localhost and production
+    // ✅ Use full absolute URL for social preview image
+  const thumbnailUrl =
+    "https://shoaibahmed-dev.vercel.app/shoaib-Thumbnail-img.jpg";
   return (
     <>
 
@@ -27,7 +29,7 @@ function App() {
           property="og:description"
           content="Portfolio of Shoaib Ahmed, showcasing web development projects in React, JavaScript, and UI/UX."
         />
-        <meta property="og:image" content="https://shoaibahmed-dev.vercel.app/shoaib-Thumbnail-img.jpg" />
+        <meta property="og:image" content={thumbnailUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
@@ -38,7 +40,7 @@ function App() {
           name="twitter:description"
           content="Front-end developer portfolio with projects in React, JavaScript, and modern UI design."
         />
-        <meta name="twitter:image" content="https://shoaibahmed-dev.vercel.app/shoaib-Thumbnail-img.jpg" />
+        <meta name="twitter:image" content={thumbnailUrl} />
       </Head>
       <div className='container mx-auto px-[clamp(1rem,4vw,2rem)]'>
         <Header />
