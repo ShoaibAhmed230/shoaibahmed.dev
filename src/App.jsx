@@ -12,7 +12,6 @@ import { Contact } from './Components/Contact/Contact'
 
 function App() {
   //  Use dynamic origin so it works on localhost and production
-  const thumbnailUrl = `${window.location.origin}/thumbnail.png`;
   return (
     <>
 
@@ -28,7 +27,9 @@ function App() {
           property="og:description"
           content="Portfolio of Shoaib Ahmed, showcasing web development projects in React, JavaScript, and UI/UX."
         />
-        <meta property="og:image" content={thumbnailUrl} />
+        <meta property="og:image" content="https://shoaibahmed-dev.vercel.app/shoaib-Thumbnail-img.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +38,7 @@ function App() {
           name="twitter:description"
           content="Front-end developer portfolio with projects in React, JavaScript, and modern UI design."
         />
-        <meta name="twitter:image" content={thumbnailUrl} />
+        <meta name="twitter:image" content="https://shoaibahmed-dev.vercel.app/shoaib-Thumbnail-img.jpg" />
       </Head>
       <div className='container mx-auto px-[clamp(1rem,4vw,2rem)]'>
         <Header />
