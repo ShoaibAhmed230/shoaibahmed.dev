@@ -1,0 +1,68 @@
+.contact-container {
+    background-color: #030712; /* Consistent with About */
+    padding: 4rem 1rem;
+}
+
+.contact-card {
+    background-color: #0b1121;
+    border: 1px solid #1f2937;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+.contact-card:hover {
+    border-color: #f1660a;
+    background-color: #111827;
+    transform: translateY(-2px);
+}
+
+.contact-input {
+    background-color: #0b1121;
+    border: 1px solid #1f2937;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    color: white;
+    width: 100%;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+    border-color: #f1660a;
+    box-shadow: 0 0 10px rgba(241, 102, 10, 0.2);
+}
+
+.btn-send {
+    border: 2px solid #374151;
+    border-radius: 9999px;
+    padding: 0.75rem 2.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-send:hover {
+    border-color: #f1660a;
+    background-color: #f1660a;
+    color: white;
+}
+
+.divider {
+    width: 1px;
+    background-color: #1f2937;
+    height: 100%;
+    margin: 0 2rem;
+}
+
+@media (max-width: 1024px) {
+    .divider {
+        display: none;
+    }
+}

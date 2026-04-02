@@ -1,14 +1,12 @@
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from 'react'
 import emailjs from "emailjs-com";
+import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import './Contact.css'
 
 export const Contact = () => {
-
-
     const [form, setForm] = useState({
         name: "",
         email: "",
-        phone: "",
         message: ""
     })
 
@@ -17,126 +15,125 @@ export const Contact = () => {
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
-        console.log('text');
-        
     }
     
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true)
 
-
         emailjs
             .send(
-                "service_3hitowk", //EmailJS service ID
-                "template_fzdw8iw",  //EmailJS template ID
+                "service_3hitowk", 
+                "template_fzdw8iw", 
                 form,
-                "nwPeWG5M9-CwV10ox"   //EmailJS public key
+                "nwPeWG5M9-CwV10ox"
             )
             .then(
                 () => {
                     setStatus("✅ Message sent successfully!");
-                    setForm({ name: "", email: "", phone: "", message: "" })
+                    setForm({ name: "", email: "", message: "" })
                     setLoading(false);
-
-                    setTimeout(()=> {
-                        setStatus("");
-                    }, 5000)
-
+                    setTimeout(() => setStatus(""), 5000);
                 },
-            (error) => {
+                (error) => {
                     setStatus("❌ Failed to send message. Try again.");
                     console.error(error)
                     setLoading(false);
-
-                    setTimeout(() => {
-                        setStatus("")
-                    }, 5000);
+                    setTimeout(() => setStatus(""), 5000);
                 }
             )
-        
-
     }
 
-
-
     return (
-        <div>
+        <section id="contact" className="contact-container mt-10">
+            <div className="container mx-auto px-4 lg:px-20">
+                <div className="flex flex-col lg:flex-row items-stretch justify-between">
+                    
+                    {/* LEFT SIDE - INFO & SOCIALS */}
+                    <div className="lg:w-5/12 flex flex-col justify-center">
+                        <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">Let's talk?</h1>
+                        <p className="text-gray-400 mb-10 text-sm md:text-base leading-relaxed max-w-sm">
+                            If you have any questions, proposals, or just want to have a chat, feel free to get in touch.
+                        </p>
 
-            <section className=" text-white  mb-10" id='contact'>
-                <div className="max-w-3xl mx-auto px-6 text-center">
-                    {/* Heading */}
-                    <h2 className="inline text-white text-3xl  font-bold text-center  text-[#f1660abf] cursor-pointer link link--dia" id="contact">Contact me</h2>
-                    <p className="text-center text-gray-400 mt-7 mb-8">
-                        Cultivating Connections: Reach Out And Connect With Me
-                    </p>
+                        <div className="space-y-6">
+                            <a href="mailto:shoaib10ahmed10@gmail.com" className="contact-card">
+                                <div className="p-3 bg-gray-800 rounded-lg">
+                                    <FaEnvelope className="text-2xl text-[#f1660a]" />
+                                </div>
+                                <span className="font-medium text-lg">E-mail</span>
+                            </a>
 
-                    {/* Form */}
-                    <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
-                        {/* Name */}
-                        <input
-                            type="text"
-                            name='name'
-                            value={form.name}
-                            onChange={handleChange}
-                            placeholder="Name"
-                            className="w-full p-3 rounded bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                        />
-
-                        {/* Email */}
-                        <input
-                            type="email"
-                            name="email"
-                            value={form.email}
-                            onChange={handleChange}
-                            placeholder="Email"
-                            className="w-full p-3 rounded bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                        />
-
-                        {/* Phone */}
-                        <input
-                            type="text"
-                            name="phone"
-                            value={form.phone}
-                            onChange={handleChange}
-                            placeholder="Phone Number"
-                            className="w-full p-3 rounded bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500 md:col-span-2"
-                        />
-
-                        {/* Message */}
-                        <textarea
-                            rows="4"
-                            name='message'
-                            value={form.message}
-                            onChange={handleChange}
-                            placeholder="Message..."
-                            className="w-full p-3 rounded bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500 md:col-span-2"
-                        ></textarea>
-
-                        {/* Button */}
-                        <div className="md:col-span-2 flex justify-end">
-                            <button
-                                className={`px-6 py-2 bg-orange-600 hover:bg-orange-700 rounded text-white font-semibold transition ${
-                                    loading
-                                    ? "bg-gray-500 cursor-not-allowed"
-                                    : "bg-orange-600 hover:bg-orange-700"
-                                }`}
-                                type="submit"
-                                disabled={loading}
-                            >
-                                {loading ? "Sending..." : "Send"}
-                            </button>
+                            <a href="https://wa.me/923148869788" target="_blank" rel="noopener noreferrer" className="contact-card">
+                                <div className="p-3 bg-gray-800 rounded-lg">
+                                    <FaWhatsapp className="text-2xl text-[#25d366]" />
+                                </div>
+                                <span className="font-medium text-lg">WhatsApp</span>
+                            </a>
                         </div>
-                    </form>
-                    {/* Loader / Status*/}
-                    {loading && (
-                        <div className="mt-4 flex justify-center">
-                            <div className="w-6 h-6 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
-                        </div>
-                    )}
+                    </div>
 
-                    {status && <p className='text-center mt-4'>{status}</p>}
+                    {/* VERTICAL DIVIDER */}
+                    <div className="divider hidden lg:block" />
+
+                    {/* RIGHT SIDE - FORM */}
+                    <div className="lg:w-6/12 mt-16 lg:mt-0">
+                        <form className="space-y-8" onSubmit={handleSubmit}>
+                            <div className="space-y-2 text-left">
+                                <label className="text-white font-medium ml-1">Name</label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    value={form.name}
+                                    onChange={handleChange}
+                                    placeholder="Insert your name"
+                                    className="contact-input"
+                                    required
+                                />
+                            </div>
+
+                            <div className="space-y-2 text-left">
+                                <label className="text-white font-medium ml-1">E-mail</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    value={form.email}
+                                    onChange={handleChange}
+                                    placeholder="Insert your e-mail"
+                                    className="contact-input"
+                                    required
+                                />
+                            </div>
+
+                            <div className="space-y-2 text-left">
+                                <label className="text-white font-medium ml-1">Message</label>
+                                <textarea
+                                    rows="6"
+                                    name="message"
+                                    value={form.message}
+                                    onChange={handleChange}
+                                    placeholder="Write your message"
+                                    className="contact-input resize-none"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div className="flex flex-col items-center lg:items-start">
+                                <button
+                                    className={`btn-send font-semibold transition ${
+                                        loading ? "opacity-50 cursor-not-allowed" : ""
+                                    }`}
+                                    type="submit"
+                                    disabled={loading}
+                                >
+                                    {loading ? "Sending..." : "Send message"}
+                                </button>
+                                {status && <p className="mt-4 font-medium text-center lg:text-left">{status}</p>}
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </section></div>
+            </div>
+        </section>
     )
 }

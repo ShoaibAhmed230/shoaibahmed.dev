@@ -1,17 +1,90 @@
-.abt-box{
-    box-shadow: rgb(255 255 255 / 17%) 0px -23px 25px 0px inset, rgb(255 255 255 / -29%) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -88px 52px 0px inset, rgb(255 255 255 / 14%) 0px 2px 1px, rgb(255 255 255 / 77%) 0px 0px 2px, rgb(255 255 255 / -10%) 10px 18px 10px, rgb(255 255 255 / -11%) -29px -41px 1px, rgb(255 255 255 / 14%) 0px 9px 11px;
+.abt-container {
+    background-color: #030712; /* Very dark blue/black background */
+    padding: 4rem 1rem;
 }
 
-.side-img-box{
-    width: 254px;
-    border-radius: 123px;
+.abt-card {
+    background-color: #0b1121;
+    border: 1px solid #1f2937;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
 }
 
-.side-img-box img{
-  -webkit-mask-image: linear-gradient(to right, black 108%, transparent 151%),
-  linear-gradient(to left, black 56%, transparent 100%),
-  linear-gradient(to bottom, black 80%, transparent 100%),
-  linear-gradient(to top, black 27%, transparent 114%);
-  -webkit-mask-composite: destination-in;
+.abt-card:hover {
+    border-color: #f1660a;
+    box-shadow: 0 0 20px rgba(241, 102, 10, 0.2);
+}
 
+.social-card {
+    background-color: #0b1121;
+    border: 1px solid #1f2937;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.social-card:hover {
+    background-color: #111827;
+    border-color: #f1660a;
+    transform: translateY(-2px);
+}
+
+/* Abstract Shapes */
+.shape-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.shape-square {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f1660a;
+    transform: rotate(45deg);
+}
+
+.shape-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #f1660a;
+}
+
+.shape-outline-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #374151;
+    border-radius: 50%;
+}
+
+.shape-arc {
+  width: 80px;
+  height: 80px;
+  border: 8px solid #374151;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(-45deg);
+}
+
+/* Float Animation */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(45deg); }
+    50% { transform: translateY(-10px) rotate(50deg); }
+    100% { transform: translateY(0px) rotate(45deg); }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
 }
