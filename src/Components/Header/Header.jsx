@@ -28,7 +28,7 @@ export const Header = () => {
       <div className="container mx-auto flex flex-wrap py-4 px-5 flex-row items-center justify-between">
         <a href="#home" className="flex items-center">
           <img
-            src="/src/assets/Images/logo.png"
+            src={logo}
             alt="logo"
             class="h-10 md:h-12 w-auto"
           />
