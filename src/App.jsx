@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className='container mx-auto '>
+    <div className=''>
       <div className="portfolio-theme-wrapper">
         <Header />
         {loading ? (

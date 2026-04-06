@@ -10,7 +10,7 @@ export const Contact = () => {
         message: ""
     })
 
-    const [status, setStatus] = useState("")
+    const [status, setStatus] = useState({ type: null, message: "" })
     const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
@@ -20,6 +20,7 @@ export const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true)
+        setStatus({ type: null, message: "" })
 
         emailjs
             .send(
@@ -30,16 +31,18 @@ export const Contact = () => {
             )
             .then(
                 () => {
-                    setStatus("✅ Message sent successfully!");
-                    setForm({ name: "", email: "", message: "" })
                     setLoading(false);
-                    setTimeout(() => setStatus(""), 5000);
+                    setStatus({ type: "success", message: "Message sent successfully!" });
+                    setForm({ name: "", email: "", message: "" })
+                    // Keep success overlay for 3 seconds before resetting status
+                    setTimeout(() => setStatus({ type: null, message: "" }), 3000);
                 },
                 (error) => {
-                    setStatus("❌ Failed to send message. Try again.");
-                    console.error(error)
                     setLoading(false);
-                    setTimeout(() => setStatus(""), 5000);
+                    setStatus({ type: "error", message: "Failed to send message. Please try again." });
+                    console.error(error)
+                    // Auto-hide error after 5 seconds but don't use overlay for error
+                    setTimeout(() => setStatus({ type: null, message: "" }), 5000);
                 }
             )
     }
@@ -118,9 +121,9 @@ export const Contact = () => {
                                 ></textarea>
                             </div>
 
-                            <div className="flex flex-col items-center lg:items-start">
+                            <div className="flex flex-col items-center lg:items-start w-full">
                                 <button
-                                    className={`btn-send font-semibold transition ${
+                                    className={`btn-send font-semibold transition w-full md:w-auto ${
                                         loading ? "opacity-50 cursor-not-allowed" : ""
                                     }`}
                                     type="submit"
@@ -128,12 +131,38 @@ export const Contact = () => {
                                 >
                                     {loading ? "Sending..." : "Send message"}
                                 </button>
-                                {status && <p className="mt-4 font-medium text-center lg:text-left">{status}</p>}
+                                
+                                {status.message && (
+                                    <div className={`status-msg ${status.type} w-full md:w-auto`}>
+                                        {status.type === "success" ? "✅ " : "❌ "}
+                                        {status.message}
+                                    </div>
+                                )}
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+
+            {/* FULL SCREEN OVERLAY */}
+            {(loading || status.type === "success") && (
+                <div className="form-overlay">
+                    {loading ? (
+                        <div className="flex flex-col items-center">
+                            <div className="loader"></div>
+                            <p className="text-white mt-4 font-medium text-lg">Sending your message...</p>
+                        </div>
+                    ) : (
+                        <div className="checkmark-container text-center">
+                            <div className="checkmark-circle">
+                                <div className="checkmark"></div>
+                            </div>
+                            <h2 className="text-white text-3xl mt-6 font-bold">Successfully Sent!</h2>
+                            <p className="text-gray-300 mt-2">I'll get back to you soon.</p>
+                        </div>
+                    )}
+                </div>
+            )}
         </section>
     )
 }
