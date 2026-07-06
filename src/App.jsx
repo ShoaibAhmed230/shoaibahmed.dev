@@ -9,6 +9,7 @@ import { Projects } from './Components/Projects/Projects'
 import { ProjectsSkeletonGrid } from './Components/Projects/ProjectSkeleton'
 import { Footer } from './Components/Footer/Footer'
 import { Contact } from './Components/Contact/Contact'
+import { ChatWidget } from './Components/ChatWidget'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -40,6 +41,7 @@ function App() {
           </>
         )}
       </div>
+      <ChatWidget />
     </div>
   )
 }
