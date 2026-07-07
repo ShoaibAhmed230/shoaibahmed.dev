@@ -30,7 +30,7 @@ export const Header = () => {
           <img
             src={logo}
             alt="logo"
-            class="h-10 md:h-12 w-auto"
+            className="h-10 md:h-12 w-auto"
           />
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center font-medium">

@@ -124,7 +124,7 @@ export const Contact = () => {
                             <div className="flex flex-col items-center lg:items-start w-full">
                                 <button
                                     className={`btn-send font-semibold transition w-full md:w-auto ${
-                                        loading ? "opacity-50 cursor-not-allowed" : ""
+                                        loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
                                     }`}
                                     type="submit"
                                     disabled={loading}

@@ -1,0 +1,26 @@
+# Shoaib Ahmed
+
+> Front-End Web Developer with 4+ years of experience, based in Karachi, Pakistan.
+
+Shoaib specializes in React.js, Next.js, WordPress, Magento 2, and Hyvä, building responsive, high-performance web applications and e-commerce storefronts.
+
+## Skills
+- React.js
+- Next.js
+- JavaScript
+- Angular
+- WordPress
+- Magento 2
+- Hyvä
+- Strapi v5
+- Tailwind CSS
+- Bootstrap
+- Material UI
+- Git
+- Technical SEO
+
+## Links
+- Portfolio: https://shoaibahmed-dev.vercel.app/
+- Contact: shoaib10ahmed10@gmail.com
+- LinkedIn: https://www.linkedin.com/in/shoaib-ahmed-9a2803160/
+- GitHub: https://github.com/ShoaibAhmed230

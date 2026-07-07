@@ -2,6 +2,28 @@ import React from 'react';
 import './HeroSection.css'
 import heroImg from '../../assets/Images/IMG-20250708-WA0013.jpg'
 
+const SKILLS = [
+  'Frontend Development',
+  'React.js',
+  'Next.js',
+  'WordPress',
+  'Technical SEO',
+  'JavaScript',
+  'Tailwind CSS',
+  'Bootstrap',
+  'Material UI',
+  'Strapi',
+  'Magento 2',
+  'Hyva Theme',
+  'AI-Assisted Development',
+];
+
+const SkillPill = ({ label }) => (
+  <span className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400 whitespace-nowrap">
+    {label}
+  </span>
+);
+
 export const HeroSection = () => {
   return (
     <section id="home" className="hero-container text-gray-400 body-font py-10 lg:py-20 overflow-hidden">
@@ -20,7 +42,7 @@ export const HeroSection = () => {
             I'm <span className="hero-gradient-text">Shoaib Ahmed</span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-300 font-medium mb-8">
-            Frontend Web Developer
+            Frontend Web Developer, Building Smart, Efficient &amp; Future-Ready Experiences
           </h2>
           <p className="text-gray-400 text-base md:text-lg mb-10 leading-relaxed max-w-lg">
             Turning complex ideas into <span className="text-white font-semibold">responsive</span>, high-performing websites with a focus on immersive user experiences.
@@ -30,18 +52,22 @@ export const HeroSection = () => {
             <a href="#contact" className="hero-btn-premium">
               Contact me
             </a>
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <span className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400">WordPress</span>
-              <span className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400">Strapi 5</span>
-              <span className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400">SEO</span>
-              <span className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400">Magento 2</span>
-            </div>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
-            <span className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400">React.js</span>
-            <span className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400">Tailwind CSS</span>
-            <span className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400">JavaScript</span>
+          {/* Desktop: static wrapped grid */}
+          <div className="mt-8 hidden lg:flex flex-wrap justify-start gap-3">
+            {SKILLS.map((skill) => (
+              <SkillPill key={skill} label={skill} />
+            ))}
+          </div>
+
+          {/* Tablet & mobile: auto-sliding marquee */}
+          <div className="mt-8 w-full lg:hidden overflow-hidden marquee-mask">
+            <div className="marquee-track gap-3">
+              {[...SKILLS, ...SKILLS].map((skill, i) => (
+                <SkillPill key={`${skill}-${i}`} label={skill} />
+              ))}
+            </div>
           </div>
         </div>
 

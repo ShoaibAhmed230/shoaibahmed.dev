@@ -21,6 +21,9 @@ export const About = () => {
                                 Currently, I work as a lead frontend developer, where I develop responsive and high-performance web applications using React, Tailwind CSS, and Node.js. I participate in code reviews, performance optimization, and the development of new features according to client and stakeholder requirements.
                             </p>
                             <p>
+                                I work efficiently, productively, and smartly by pairing my frontend expertise with AI tools, whether it's deep learning research, debugging, or automating repetitive tasks, so I can keep pace with the ever-evolving world of technology and ship better features faster without cutting corners on quality. This site's chat assistant (bottom-right corner) is one example, feel free to ask it anything about my work.
+                            </p>
+                            <p>
                                 In my free time, I enjoy exploring new technologies and staying fit by regularly going to the gym. Traveling to different places and discovering new cultures and landscapes is something that fascinates me and keeps my creative perspective fresh.
                             </p>
                         </div>
@@ -62,7 +65,7 @@ export const About = () => {
                         <FaGithub className="text-xl" />
                         <span className="font-medium">GitHub</span>
                     </a>
-                    <a href="https://www.instagram.com/shoaib52538?igsh=b2Z6bmVrcTRqOHh3" target="_blank" rel="noopener noreferrer" className="social-card">
+                    <a href="https://www.instagram.com/shoaib52538?utm_source=qr&igsh=b2Z6bmVrcTRqOHh3" target="_blank" rel="noopener noreferrer" className="social-card">
                         <FaInstagram className="text-xl text-[#e4405f]" />
                         <span className="font-medium">Instagram</span>
                     </a>
