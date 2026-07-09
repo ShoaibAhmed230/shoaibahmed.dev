@@ -1,48 +1,14 @@
-import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import { Header } from './Components/Header/Header'
-import { HeroSection } from './Components/Hero-Section/HeroSection'
-import HeroSkeleton from './Components/Hero-Section/HeroSkeleton'
-import { About } from './Components/About/About'
-import AboutSkeleton from './Components/About/AboutSkeleton'
-import { Projects } from './Components/Projects/Projects'
-import { ProjectsSkeletonGrid } from './Components/Projects/ProjectSkeleton'
-import { Footer } from './Components/Footer/Footer'
-import { Contact } from './Components/Contact/Contact'
-import { ChatWidget } from './Components/ChatWidget'
+import Home from './pages/Home'
+import ProjectsPage from './pages/ProjectsPage'
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <div className=''>
-      <div className="portfolio-theme-wrapper">
-        <Header />
-        {loading ? (
-          <>
-            <HeroSkeleton />
-            <AboutSkeleton />
-            <ProjectsSkeletonGrid />
-          </>
-        ) : (
-          <>
-            <HeroSection />
-            <About />
-            <Projects />
-            <Contact />
-            <Footer />
-          </>
-        )}
-      </div>
-      <ChatWidget />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects" element={<ProjectsPage />} />
+    </Routes>
   )
 }
 

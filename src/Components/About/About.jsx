@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import shImg from '../../assets/Images/shoaib-side-photo2.jpg'
 import './About.css'
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaChevronDown } from "react-icons/fa";
 
 export const About = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
     return (
         <section id="about" className="abt-container mt-10">
             <div className="container mx-auto px-4">
@@ -13,20 +15,42 @@ export const About = () => {
                         <span className="text-[#f1660a] font-medium mb-4 block">👋 Hey, I'm</span>
                         <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">Shoaib Ahmed</h1>
                         
-                        <div className="space-y-6 text-gray-400 leading-relaxed text-sm md:text-base">
-                            <p>
-                                I hold a degree in Frontend Development and Engineering, and I'm currently specializing in full-stack integrations and modern UI architectures.
-                            </p>
-                            <p>
-                                Currently, I work as a lead frontend developer, where I develop responsive and high-performance web applications using React, Tailwind CSS, and Node.js. I participate in code reviews, performance optimization, and the development of new features according to client and stakeholder requirements.
-                            </p>
-                            <p>
-                                I work efficiently, productively, and smartly by pairing my frontend expertise with AI tools, whether it's deep learning research, debugging, or automating repetitive tasks, so I can keep pace with the ever-evolving world of technology and ship better features faster without cutting corners on quality. This site's chat assistant (bottom-right corner) is one example, feel free to ask it anything about my work.
-                            </p>
-                            <p>
-                                In my free time, I enjoy exploring new technologies and staying fit by regularly going to the gym. Traveling to different places and discovering new cultures and landscapes is something that fascinates me and keeps my creative perspective fresh.
-                            </p>
+                        <div className="relative">
+                            <div
+                                className={`space-y-6 text-gray-400 leading-relaxed text-sm md:text-base overflow-hidden transition-[max-height] duration-500 ease-in-out lg:!max-h-none lg:overflow-visible ${isExpanded ? 'max-h-[1200px]' : 'max-h-[220px]'}`}
+                            >
+                                <p>
+                                    I'm a Web Developer with 5+ years of experience, specializing in responsive, high-performance web applications, modern UI architectures, and Technical SEO.
+                                </p>
+                                <p>
+                                    I build fast, user-friendly web apps using React, Next.js, and Tailwind CSS, with a focus on code quality, performance optimization, and clean UI. I've worked on projects ranging from WordPress redesigns to Next.js + Strapi v5 builds.
+                                </p>
+                                <p>
+                                    Beyond development, I handle advanced website maintenance and Technical SEO — PHP upgrades, plugin audits, caching and performance tuning (WP Rocket, PageSpeed/Core Web Vitals), image optimization (WebP), security hardening, GA4/GTM/Search Console setup, and site health monitoring to keep sites fast, secure, and search-ready.
+                                </p>
+                                <p>
+                                    I pair my expertise with AI tools for research, debugging, and automation — shipping better features faster without cutting corners. This site's chat assistant (bottom-right corner) is one example; feel free to ask it anything about my work.
+                                </p>
+                                <p>
+                                    In my free time, I explore new technologies, hit the gym, and enjoy traveling to discover new cultures and landscapes.
+                                </p>
+                            </div>
+
+                            {/* Fade-out overlay when collapsed, mobile only */}
+                            {!isExpanded && (
+                                <div className="lg:hidden pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0b1121] to-transparent" />
+                            )}
                         </div>
+
+                        <button
+                            onClick={() => setIsExpanded((prev) => !prev)}
+                            className="lg:hidden mt-4 flex items-center gap-2 text-[#f1660a] font-medium text-sm cursor-pointer"
+                        >
+                            {isExpanded ? 'Read less' : 'Read more'}
+                            <FaChevronDown
+                                className={`text-xs transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                            />
+                        </button>
                     </div>
 
                     {/* RIGHT CARD - PROFILE & SHAPES */}

@@ -16,6 +16,7 @@ const SKILLS = [
   'Magento 2',
   'Hyva Theme',
   'AI-Assisted Development',
+  'Email Templates',
 ];
 
 const SkillPill = ({ label }) => (
@@ -34,7 +35,7 @@ export const HeroSection = () => {
       <div className="container mx-auto flex px-5 lg:flex-row flex-col items-center relative z-10">
 
         {/* LEFT SIDE - TEXT CONTENT */}
-        <div className="lg:flex-grow lg:w-1/2 lg:pr-24 flex flex-col lg:items-start lg:text-left items-center text-center mb-16 lg:mb-0">
+        <div className="w-full lg:flex-grow lg:w-1/2 lg:pr-24 flex flex-col lg:items-start lg:text-left items-center text-center mb-16 lg:mb-0">
           <span className="text-[#f1660a] font-bold tracking-widest text-sm mb-4 uppercase drop-shadow-lg">
             👋 Welcome to my world
           </span>
@@ -42,10 +43,10 @@ export const HeroSection = () => {
             I'm <span className="hero-gradient-text">Shoaib Ahmed</span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-300 font-medium mb-8">
-            Frontend Web Developer, Building Smart, Efficient &amp; Future-Ready Experiences
+            AI-Powered Web Developer, Building Smart, Efficient &amp; Future-Ready Experiences
           </h2>
           <p className="text-gray-400 text-base md:text-lg mb-10 leading-relaxed max-w-lg">
-            Turning complex ideas into <span className="text-white font-semibold">responsive</span>, high-performing websites with a focus on immersive user experiences.
+            Turning complex ideas into responsive, high-performing websites — accelerated with <span className="text-white font-semibold">AI</span>-assisted development — with a focus on immersive user experiences.
           </p>
 
           <div className="flex flex-col items-center lg:items-start gap-6">

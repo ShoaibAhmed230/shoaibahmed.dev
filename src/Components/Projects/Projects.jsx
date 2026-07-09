@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../Projects/Projects.css'
 import '../../assets/Theme/Theme.css'
 import projectThummbnail1 from '../../assets/Images/applab-thumb-img.png'
@@ -10,10 +11,18 @@ import projectThummbnail6 from '../../assets/Images/weatherapp-thumb-img.png'
 import projectThummbnail7 from '../../assets/Images/talentvare-thumb-img.png'
 import projectThummbnail8 from '../../assets/Images/wordpress-thumb-img.png'
 import projectThummbnail9 from '../../assets/Images/jewelry-thumb-img.png'
+import projectThummbnail10 from '../../assets/Images/oxford-thumb-img.png'
+import projectThummbnail11 from '../../assets/Images/the-brand-report.png'
+import projectThummbnail12 from '../../assets/Images/brand-motion.png'
+import projectThummbnail13 from '../../assets/Images/nimbus-payment.png'
 import { BsFillEyeFill } from "react-icons/bs";
 
 const projectData = [
+    { title: "Oxford Summer Program - Education Website", link: "https://oxfordsummerprogram.com/en", img: projectThummbnail10 },
+    { title: "Nimbus Pay - Payment Email Template", link: "https://nimbus-pay-payment-email.vercel.app/", img: projectThummbnail13 },
     { title: "TalentVare - Job Portal", link: "https://find-job-pi.vercel.app/", img: projectThummbnail7 },
+    { title: "BrandMotion - Email Template", link: "https://brandmotion-email-template.vercel.app/", img: projectThummbnail12 },
+    { title: "The Brand Report - Newsletter", link: "https://brand-report-newsletter.vercel.app/", img: projectThummbnail11 },
     { title: "Jewelicious - Jewelry E-commerce", link: "https://shoaibahmed230.github.io/jewelry-e-commerce-site/", img: projectThummbnail9 },
     { title: "App Lab - Software Landing Page", link: "https://connectifysync.com/shoaib/app-lab-website/", img: projectThummbnail1 },
     { title: "iArticle - Resource Platform", link: "https://iarticle-website-frontend-rr4d.vercel.app/", img: projectThummbnail2 },
@@ -24,14 +33,16 @@ const projectData = [
     { title: "Molly Pittman - WordPress Site", link: "https://floralwhite-gnu-194370.hostingersite.com/", img: projectThummbnail8 },
 ];
 
-export const Projects = () => {
+export const Projects = ({ limit }) => {
+    const visibleProjects = limit ? projectData.slice(0, limit) : projectData;
+
     return (
         <div className='text-center mt-10' id='projects'>
             <h1 className='inline text-white md:text-3xl text-2xl text-wrap font-bold text-center text-[#f1660abf] cursor-pointer link link--dia' id="Projects">My Projects Highlight</h1>
             <section className="text-gray-400 body-font">
                 <div className="container px-5 pt-16 pb-24 mx-auto">
                     <div className="flex flex-wrap -m-4">
-                        {projectData.map((project, index) => (
+                        {visibleProjects.map((project, index) => (
                             <div key={index} className="lg:w-1/3 sm:w-1/2 w-full p-4">
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="block group">
                                     <div className="flex relative overflow-hidden rounded-lg shadow-lg shadow-[rgba(255,255,255,0.1)] border-gray-700 border-2 transition-all duration-300 group-hover:border-[#f1660abf]">
@@ -49,6 +60,17 @@ export const Projects = () => {
                             </div>
                         ))}
                     </div>
+
+                    {limit && projectData.length > limit && (
+                        <div className="mt-4 flex justify-center">
+                            <Link
+                                to="/projects"
+                                className="px-6 py-3 rounded-full border border-[#f1660abf] text-[#f1660abf] font-semibold text-sm hover:bg-[#f1660abf] hover:text-white transition-all duration-300"
+                            >
+                                View More Projects
+                            </Link>
+                        </div>
+                    )}
                 </div>
             </section>
         </div>

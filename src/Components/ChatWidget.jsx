@@ -120,7 +120,7 @@ export const ChatWidget = () => {
   const showSuggestions = messages.length === 1 && !isThinking;
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end">
+    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end pointer-events-none">
       <div
         className={`mb-4 w-[90vw] max-w-sm origin-bottom-right rounded-2xl border border-gray-800 bg-[#0b1121] shadow-2xl shadow-black/50 transition-all duration-300 ease-out ${
           isOpen
@@ -225,7 +225,7 @@ export const ChatWidget = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 pointer-events-auto">
         <span
           className={`block whitespace-nowrap rounded-full border border-[#f1660a]/30 bg-[#0b1121] px-3 py-1.5 text-xs font-medium text-gray-300 shadow-lg shadow-black/30 transition-all duration-300 ${
             isOpen ? 'pointer-events-none translate-x-2 opacity-0' : 'translate-x-0 opacity-100'

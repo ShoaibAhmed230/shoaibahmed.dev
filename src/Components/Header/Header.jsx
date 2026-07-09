@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/Images/logo.png';
 import './Header.css';
 
 export const Header = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
 
   useEffect(() => {
+    if (!isHome) return;
+
     const handleScroll = () => {
       const sections = ['home', 'about', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
@@ -21,22 +26,25 @@ export const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHome]);
+
+  const sectionHref = (id) => (isHome ? `#${id}` : `/#${id}`);
 
   return (
     <header className="text-gray-400 bg-transparent body-font relative z-20">
       <div className="container mx-auto flex flex-wrap py-4 px-5 flex-row items-center justify-between">
-        <a href="#home" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img
             src={logo}
             alt="logo"
             className="h-10 md:h-12 w-auto"
           />
-        </a>
+        </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center font-medium">
-          <a href="#about" className={`mx-3 md:mx-5 nav-link transition-all ${activeSection === 'about' ? 'active' : ''}`}>About</a>
-          <a href="#projects" className={`mx-3 md:mx-5 nav-link transition-all ${activeSection === 'projects' ? 'active' : ''}`}>Projects</a>
-          <a href="#contact" className={`mx-3 md:mx-5 nav-link transition-all ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
+          <a href={sectionHref('home')} className={`mx-3 md:mx-5 nav-link transition-all ${isHome && activeSection === 'home' ? 'active' : ''}`}>Home</a>
+          <a href={sectionHref('about')} className={`mx-3 md:mx-5 nav-link transition-all ${isHome && activeSection === 'about' ? 'active' : ''}`}>About</a>
+          <a href={sectionHref('projects')} className={`mx-3 md:mx-5 nav-link transition-all ${(pathname === '/projects') || (isHome && activeSection === 'projects') ? 'active' : ''}`}>Projects</a>
+          <a href={sectionHref('contact')} className={`mx-3 md:mx-5 nav-link transition-all ${isHome && activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
         </nav>
       </div>
     </header>
