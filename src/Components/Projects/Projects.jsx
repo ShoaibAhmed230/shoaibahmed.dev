@@ -15,9 +15,14 @@ import projectThummbnail10 from '../../assets/Images/oxford-thumb-img.png'
 import projectThummbnail11 from '../../assets/Images/the-brand-report.png'
 import projectThummbnail12 from '../../assets/Images/brand-motion.png'
 import projectThummbnail13 from '../../assets/Images/nimbus-payment.png'
+import projectThummbnail14 from '../../assets/Images/restaurant-thumb-img.png'
+import projectThummbnail15 from '../../assets/Images/flownotes-thumb-img.png'
 import { BsFillEyeFill } from "react-icons/bs";
+import { tiltHandlers } from '../Effects/tilt'
 
 const projectData = [
+    { title: "FlowNotes - Finance Notes Tracker", link: "https://flow-notes-tracker.vercel.app/", img: projectThummbnail15 },
+    { title: "SmartStack - Restaurant Website", link: "https://greenyellow-dogfish-173403.hostingersite.com/", img: projectThummbnail14 },
     { title: "Oxford Summer Program - Education Website", link: "https://oxfordsummerprogram.com/en", img: projectThummbnail10 },
     { title: "Nimbus Pay - Payment Email Template", link: "https://nimbus-pay-payment-email.vercel.app/", img: projectThummbnail13 },
     { title: "TalentVare - Job Portal", link: "https://find-job-pi.vercel.app/", img: projectThummbnail7 },
@@ -38,17 +43,20 @@ export const Projects = ({ limit }) => {
 
     return (
         <div className='text-center mt-10' id='projects'>
+            <div data-reveal="up">
             <h1 className='inline text-white md:text-3xl text-2xl text-wrap font-bold text-center text-[#f1660abf] cursor-pointer link link--dia' id="Projects">My Projects Highlight</h1>
+            <span className="heading-line" />
+            </div>
             <section className="text-gray-400 body-font">
                 <div className="container px-5 pt-16 pb-24 mx-auto">
                     <div className="flex flex-wrap -m-4">
                         {visibleProjects.map((project, index) => (
-                            <div key={index} className="lg:w-1/3 sm:w-1/2 w-full p-4">
+                            <div key={index} data-reveal="up" style={{ "--d": `${(index % 3) * 120}ms` }} className="lg:w-1/3 sm:w-1/2 w-full p-4">
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="block group">
-                                    <div className="flex relative overflow-hidden rounded-lg shadow-lg shadow-[rgba(255,255,255,0.1)] border-gray-700 border-2 transition-all duration-300 group-hover:border-[#f1660abf]">
+                                    <div {...tiltHandlers} className="tilt-card flex relative overflow-hidden rounded-lg shadow-lg shadow-[rgba(255,255,255,0.1)] border-gray-700 border-2 transition-all duration-300 group-hover:border-[#f1660abf]">
                                         <img alt={project.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 object-center cursor-pointer" src={project.img} />
                                         <div className="px-8 items-center justify-center flex py-10 relative z-10 w-full aspect-video bg-black/70 transition-all cursor-pointer opacity-0 group-hover:opacity-100">
-                                            <BsFillEyeFill className="text-4xl hover:text-white transition-all text-white" />
+                                            <BsFillEyeFill className="text-4xl text-white scale-50 group-hover:scale-100 transition-transform duration-500" />
                                         </div>
                                     </div>
                                     <div className="mt-4 text-left">
@@ -62,7 +70,7 @@ export const Projects = ({ limit }) => {
                     </div>
 
                     {limit && projectData.length > limit && (
-                        <div className="mt-4 flex justify-center">
+                        <div data-reveal="zoom" className="mt-4 flex justify-center">
                             <Link
                                 to="/projects"
                                 className="px-6 py-3 rounded-full border border-[#f1660abf] text-[#f1660abf] font-semibold text-sm hover:bg-[#f1660abf] hover:text-white transition-all duration-300"

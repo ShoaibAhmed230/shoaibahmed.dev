@@ -53,7 +53,7 @@ export const Contact = () => {
                 <div className="flex flex-col lg:flex-row items-stretch justify-between">
                     
                     {/* LEFT SIDE - INFO & SOCIALS */}
-                    <div className="lg:w-5/12 flex flex-col justify-center">
+                    <div data-reveal="left" className="lg:w-5/12 flex flex-col justify-center">
                         <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">Let's talk?</h1>
                         <p className="text-gray-400 mb-10 text-sm md:text-base leading-relaxed max-w-sm">
                             If you have any questions, proposals, or just want to have a chat, feel free to get in touch.
@@ -80,7 +80,7 @@ export const Contact = () => {
                     <div className="divider hidden lg:block" />
 
                     {/* RIGHT SIDE - FORM */}
-                    <div className="lg:w-6/12 mt-16 lg:mt-0">
+                    <div data-reveal="right" style={{ "--d": "150ms" }} className="lg:w-6/12 mt-16 lg:mt-0">
                         <form className="space-y-8" onSubmit={handleSubmit}>
                             <div className="space-y-2 text-left">
                                 <label className="text-white font-medium ml-1">Name</label>
@@ -123,7 +123,7 @@ export const Contact = () => {
 
                             <div className="flex flex-col items-center lg:items-start w-full">
                                 <button
-                                    className={`btn-send font-semibold transition w-full md:w-auto ${
+                                    className={`btn-send shine-btn font-semibold transition w-full md:w-auto ${
                                         loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
                                     }`}
                                     type="submit"

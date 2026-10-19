@@ -1,6 +1,6 @@
 import React from 'react';
 import './HeroSection.css'
-import heroImg from '../../assets/Images/IMG-20250708-WA0013.jpg'
+import { HeroCodeCard } from './HeroCodeCard'
 
 const SKILLS = [
   'Frontend Development',
@@ -16,11 +16,15 @@ const SKILLS = [
   'Magento 2',
   'Hyva Theme',
   'AI-Assisted Development',
+  'WordPress via Claude MCP',
   'Email Templates',
 ];
 
-const SkillPill = ({ label }) => (
-  <span className="px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400 whitespace-nowrap">
+const SkillPill = ({ label, index }) => (
+  <span
+    className={`skill-pill px-4 py-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full text-[11px] font-mono text-gray-400 whitespace-nowrap ${index !== undefined ? 'skill-pop' : ''}`}
+    style={index !== undefined ? { '--d': `${900 + index * 60}ms` } : undefined}
+  >
     {label}
   </span>
 );
@@ -35,30 +39,30 @@ export const HeroSection = () => {
       <div className="container mx-auto flex px-5 lg:flex-row flex-col items-center relative z-10">
 
         {/* LEFT SIDE - TEXT CONTENT */}
-        <div className="w-full lg:flex-grow lg:w-1/2 lg:pr-24 flex flex-col lg:items-start lg:text-left items-center text-center mb-16 lg:mb-0">
-          <span className="text-[#f1660a] font-bold tracking-widest text-sm mb-4 uppercase drop-shadow-lg">
-            👋 Welcome to my world
+        <div data-scroll-fade className="w-full lg:flex-grow lg:w-1/2 lg:pr-24 flex flex-col lg:items-start lg:text-left items-center text-center mb-16 lg:mb-0">
+          <span data-reveal="down" className="text-[#f1660a] font-bold tracking-widest text-sm mb-4 uppercase drop-shadow-lg">
+            <span className="wave-hand">👋</span> Welcome to my world
           </span>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+          <h1 data-reveal="blur" style={{ "--d": "150ms" }} className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
             I'm <span className="hero-gradient-text">Shoaib Ahmed</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-300 font-medium mb-8">
+          <h2 data-reveal="up" style={{ "--d": "300ms" }} className="text-2xl md:text-3xl text-gray-300 font-medium mb-8">
             AI-Powered Web Developer, Building Smart, Efficient &amp; Future-Ready Experiences
           </h2>
-          <p className="text-gray-400 text-base md:text-lg mb-10 leading-relaxed max-w-lg">
+          <p data-reveal="up" style={{ "--d": "450ms" }} className="text-gray-400 text-base md:text-lg mb-10 leading-relaxed max-w-lg">
             Turning complex ideas into responsive, high-performing websites — accelerated with <span className="text-white font-semibold">AI</span>-assisted development — with a focus on immersive user experiences.
           </p>
 
-          <div className="flex flex-col items-center lg:items-start gap-6">
-            <a href="#contact" className="hero-btn-premium">
+          <div data-reveal="zoom" style={{ "--d": "600ms" }} className="flex flex-col items-center lg:items-start gap-6">
+            <a href="#contact" className="hero-btn-premium shine-btn pulse-ring">
               Contact me
             </a>
           </div>
 
           {/* Desktop: static wrapped grid */}
           <div className="mt-8 hidden lg:flex flex-wrap justify-start gap-3">
-            {SKILLS.map((skill) => (
-              <SkillPill key={skill} label={skill} />
+            {SKILLS.map((skill, i) => (
+              <SkillPill key={skill} label={skill} index={i} />
             ))}
           </div>
 
@@ -72,13 +76,11 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="lg:w-5/12 w-full flex justify-center lg:justify-end items-end relative overflow-visible">
-          <div className="hero-img-box max-w-xs md:max-w-sm">
-            <img
-              className="hero-img-blend"
-              alt="Shoaib Ahmed - Frontend Developer"
-              src={heroImg}
-            />
+        <div className="lg:w-5/12 w-full flex justify-center lg:justify-end items-center relative overflow-visible">
+          <div data-parallax="0.25" className="w-full flex justify-center lg:justify-end">
+          <div data-reveal="right" style={{ "--d": "300ms" }} className="w-full flex justify-center lg:justify-end">
+            <HeroCodeCard />
+          </div>
           </div>
         </div>
 

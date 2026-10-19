@@ -21,11 +21,11 @@ const HeroSkeleton = () => {
                     </div>
                 </div>
 
-                {/* IMAGE & BADGES SKELETON */}
+                {/* CODE CARD & BADGES SKELETON */}
                 <div className="lg:w-full md:w-1/2 w-full flex justify-center items-center relative">
                     <Skeleton className="absolute top-0 left-10 h-10 w-40 rounded-xl" />
                     <Skeleton className="absolute bottom-10 right-10 h-10 w-36 rounded-xl" />
-                    <Skeleton className="w-[320px] h-[400px] lg:w-[400px] rounded-2xl" />
+                    <Skeleton className="w-full max-w-[480px] h-[300px] rounded-2xl" />
                 </div>
 
             </div>

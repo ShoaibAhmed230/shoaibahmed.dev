@@ -5,7 +5,7 @@ import { FaInstagram, FaLinkedinIn, FaDribbble, FaBehance, FaEnvelope, FaPhoneAl
 export const Footer = () => {
   return (
     <footer className=" text-gray-300 py-10">
-      <div className="container mx-auto px-4 text-center">
+      <div data-reveal="up" className="container mx-auto px-4 text-center">
 
         {/* Navigation Links */}
         {/* <nav className="mb-6">

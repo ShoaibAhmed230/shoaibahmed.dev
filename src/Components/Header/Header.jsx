@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/Images/logo.png';
 import './Header.css';
+import { ThemeToggle } from '../Theme/ThemeToggle';
 
 export const Header = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -32,7 +33,7 @@ export const Header = () => {
 
   return (
     <header className="text-gray-400 bg-transparent body-font relative z-20">
-      <div className="container mx-auto flex flex-wrap py-4 px-5 flex-row items-center justify-between">
+      <div data-reveal="down" className="container mx-auto flex flex-wrap py-4 px-5 flex-row items-center justify-between">
         <Link to="/" className="flex items-center">
           <img
             src={logo}
@@ -45,6 +46,7 @@ export const Header = () => {
           <a href={sectionHref('about')} className={`mx-3 md:mx-5 nav-link transition-all ${isHome && activeSection === 'about' ? 'active' : ''}`}>About</a>
           <a href={sectionHref('projects')} className={`mx-3 md:mx-5 nav-link transition-all ${(pathname === '/projects') || (isHome && activeSection === 'projects') ? 'active' : ''}`}>Projects</a>
           <a href={sectionHref('contact')} className={`mx-3 md:mx-5 nav-link transition-all ${isHome && activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
+          <ThemeToggle />
         </nav>
       </div>
     </header>
