@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import avatar from '../../assets/Images/shoaib-about-photo.webp'
 
-const MOBILE = '(max-width: 767px)';
 const clamp01 = (n) => Math.min(1, Math.max(0, n));
 
-// Mobile only: a round photo above the hero text that, as the page scrolls,
+// A round photo above the hero text that, as the page scrolls,
 // glides up and shrinks into the header, then hands off to #header-avatar in
 // place of the logo (like a profile header on Upwork).
 export const HeroAvatar = () => {
@@ -12,7 +11,6 @@ export const HeroAvatar = () => {
   const photoRef = useRef(null);
 
   useEffect(() => {
-    const mq = window.matchMedia(MOBILE);
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const logo = document.getElementById('header-logo');
     const docked = document.getElementById('header-avatar');
@@ -31,7 +29,6 @@ export const HeroAvatar = () => {
       const slot = slotRef.current;
       const photo = photoRef.current;
       if (!slot || !photo || !docked) return;
-      if (!mq.matches) return reset();
 
       const from = slot.getBoundingClientRect();
       const to = docked.getBoundingClientRect();
@@ -67,24 +64,22 @@ export const HeroAvatar = () => {
     update();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
-    mq.addEventListener('change', onScroll);
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
-      mq.removeEventListener('change', onScroll);
       reset();
     };
   }, []);
 
   return (
-    <div ref={slotRef} className="hero-avatar-slot md:hidden relative z-50 w-28 h-28 mx-auto mb-6">
-      <div ref={photoRef} className="hero-avatar w-28 h-28 rounded-full p-[3px] will-change-transform">
+    <div ref={slotRef} className="hero-avatar-slot relative z-50 w-28 h-28 lg:w-32 lg:h-32 mb-6 shrink-0">
+      <div ref={photoRef} className="hero-avatar w-full h-full rounded-full p-[3px] will-change-transform">
         <img
           src={avatar}
           alt="Shoaib Ahmed"
-          width="112"
-          height="112"
+          width="128"
+          height="128"
           fetchPriority="high"
           className="w-full h-full rounded-full object-cover object-top"
         />

@@ -37,11 +37,15 @@ export const HeroSection = () => {
       <div className="blur-blob blob-1" />
       <div className="blur-blob blob-2" />
 
-      <div className="container mx-auto flex px-5 lg:flex-row flex-col items-center relative md:z-10">
-        <HeroAvatar />
+      {/* No z-index here: the docking photo must be able to rise above the fixed header. */}
+      <div className="container mx-auto flex px-5 lg:flex-row flex-col items-center relative">
 
-        {/* LEFT SIDE - TEXT CONTENT */}
-        <div data-scroll-fade className="w-full lg:flex-grow lg:w-1/2 lg:pr-24 flex flex-col lg:items-start lg:text-left items-center text-center mb-16 lg:mb-0">
+        {/* LEFT SIDE - PHOTO + TEXT CONTENT */}
+        <div className="w-full lg:flex-grow lg:w-1/2 lg:pr-24 flex flex-col lg:items-start lg:text-left items-center text-center mb-16 lg:mb-0">
+          {/* Kept outside the scroll-fade so the photo stays sharp while it docks. */}
+          <HeroAvatar />
+
+          <div data-scroll-fade className="w-full flex flex-col lg:items-start items-center">
           <span data-reveal="down" className="text-[#f1660a] font-bold tracking-widest text-sm mb-4 uppercase drop-shadow-lg">
             <span className="wave-hand">👋</span> Welcome to my world
           </span>
@@ -75,6 +79,7 @@ export const HeroSection = () => {
                 <SkillPill key={`${skill}-${i}`} label={skill} />
               ))}
             </div>
+          </div>
           </div>
         </div>
 

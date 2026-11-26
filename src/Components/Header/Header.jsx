@@ -22,7 +22,8 @@ export const Header = () => {
         return;
       }
       const sections = ['home', 'about', 'projects', 'contact'];
-      const scrollPosition = window.scrollY + 100;
+      // Measure below the fixed header so the section under it counts as active.
+      const scrollPosition = window.scrollY + (headerRef.current?.offsetHeight || 0) + 40;
 
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
@@ -37,7 +38,7 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isHome]);
 
-  // Mobile header is fixed: track scroll for its shadow, and expose its
+  // Header is fixed: track scroll for its shadow, and expose its
   // height so the spacer below keeps content from sliding under it.
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -62,7 +63,7 @@ export const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`site-header text-gray-400 bg-transparent body-font fixed md:relative top-0 inset-x-0 z-40 md:z-20 ${scrolled ? 'is-scrolled' : ''}`}
+        className={`site-header text-gray-400 bg-transparent body-font fixed top-0 inset-x-0 z-40 ${scrolled ? 'is-scrolled' : ''}`}
       >
         <div data-reveal="down" className="container mx-auto flex flex-wrap py-3 md:py-4 px-5 flex-row items-center justify-between">
           <Link to="/" className="header-brand relative flex items-center order-1" aria-label="Shoaib Ahmed — home">
@@ -74,7 +75,7 @@ export const Header = () => {
               height="96"
               className="h-10 md:h-12 w-auto"
             />
-            {/* Mobile: the hero photo docks here on scroll (see HeroAvatar). */}
+            {/* The hero photo docks here on scroll (see HeroAvatar). */}
             <img
               id="header-avatar"
               src={avatar}
@@ -82,7 +83,7 @@ export const Header = () => {
               aria-hidden="true"
               width="40"
               height="40"
-              className="md:hidden absolute left-0 top-0 w-10 h-10 rounded-full border-2 border-[#f1660a] object-cover object-top opacity-0 pointer-events-none"
+              className="absolute left-0 top-0 w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#f1660a] object-cover object-top opacity-0 pointer-events-none"
             />
           </Link>
           <nav className="order-3 md:order-2 w-full md:w-auto md:ml-auto mt-1 md:mt-0 flex flex-wrap items-center text-base justify-center font-medium">
@@ -96,7 +97,7 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <div className="md:hidden" style={{ height: 'var(--header-h, 104px)' }} aria-hidden="true" />
+      <div style={{ height: 'var(--header-h, 104px)' }} aria-hidden="true" />
     </>
   );
 };

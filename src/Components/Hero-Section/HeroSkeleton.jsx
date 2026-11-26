@@ -8,7 +8,7 @@ const HeroSkeleton = () => {
                 
                 {/* TEXT CONTENT SKELETON */}
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center mb-16 md:mb-0">
-                    <Skeleton className="md:hidden h-28 w-28 rounded-full mb-6" />
+                    <Skeleton className="h-28 w-28 lg:h-32 lg:w-32 rounded-full mb-6" />
                     <Skeleton className="h-6 w-32 mb-4" />
                     <Skeleton className="h-20 w-full md:w-3/4 mb-6" />
                     <Skeleton className="h-8 w-48 mb-8" />
