@@ -54,7 +54,7 @@ export const Contact = () => {
                     
                     {/* LEFT SIDE - INFO & SOCIALS */}
                     <div data-reveal="left" className="lg:w-5/12 flex flex-col justify-center">
-                        <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">Let's talk?</h1>
+                        <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">Let's talk?</h2>
                         <p className="text-gray-400 mb-10 text-sm md:text-base leading-relaxed max-w-sm">
                             If you have any questions, proposals, or just want to have a chat, feel free to get in touch.
                         </p>

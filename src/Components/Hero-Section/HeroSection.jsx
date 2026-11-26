@@ -47,7 +47,7 @@ export const HeroSection = () => {
             I'm <span className="hero-gradient-text">Shoaib Ahmed</span>
           </h1>
           <h2 data-reveal="up" style={{ "--d": "300ms" }} className="text-2xl md:text-3xl text-gray-300 font-medium mb-8">
-            AI-Powered Web Developer, Building Smart, Efficient &amp; Future-Ready Experiences
+            AI-Powered Front-End Web Developer in Karachi, Building Fast React, Next.js &amp; WordPress Experiences
           </h2>
           <p data-reveal="up" style={{ "--d": "450ms" }} className="text-gray-400 text-base md:text-lg mb-10 leading-relaxed max-w-lg">
             Turning complex ideas into responsive, high-performing websites — accelerated with <span className="text-white font-semibold">AI</span>-assisted development — with a focus on immersive user experiences.

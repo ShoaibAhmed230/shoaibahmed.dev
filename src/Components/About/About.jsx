@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import shImg from '../../assets/Images/shoaib-side-photo2.jpg'
+import shImg from '../../assets/Images/shoaib-about-photo.webp'
 import './About.css'
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaChevronDown } from "react-icons/fa";
 
@@ -14,7 +14,7 @@ export const About = () => {
                     <div data-reveal="left" className="lg:w-7/12 flex">
                     <div className="w-full abt-card p-8 md:p-12 text-left relative overflow-hidden group">
                         <span className="text-[#f1660a] font-medium mb-4 block">👋 Hey, I'm</span>
-                        <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">Shoaib Ahmed</h1>
+                        <h2 className="text-white text-4xl md:text-5xl font-bold mb-8">Shoaib Ahmed</h2>
                         
                         <div className="relative">
                             <div
@@ -74,7 +74,7 @@ export const About = () => {
                             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-[#f1660a] overflow-hidden shadow-[0_0_50px_rgba(241,102,10,0.3)]">
                                 <img 
                                     src={shImg} 
-                                    alt="Shoaib Ahmed" 
+                                    alt="Shoaib Ahmed, front-end web developer in Karachi" 
                                     className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110"
                                 />
                             </div>

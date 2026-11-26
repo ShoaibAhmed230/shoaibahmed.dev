@@ -1,6 +1,6 @@
 # Shoaib Ahmed
 
-> Front-End Web Developer with 4+ years of experience, based in Karachi, Pakistan.
+> Front-End Web Developer with 5+ years of experience, based in Karachi, Pakistan.
 
 Shoaib specializes in React.js, Next.js, WordPress, Magento 2, and Hyvä, building responsive, high-performance web applications and e-commerce storefronts.
 

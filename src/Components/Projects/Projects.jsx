@@ -44,7 +44,7 @@ export const Projects = ({ limit }) => {
     return (
         <div className='text-center mt-10' id='projects'>
             <div data-reveal="up">
-            <h1 className='inline text-white md:text-3xl text-2xl text-wrap font-bold text-center text-[#f1660abf] cursor-pointer link link--dia' id="Projects">My Projects Highlight</h1>
+            <h2 className='inline text-white md:text-3xl text-2xl text-wrap font-bold text-center text-[#f1660abf] cursor-pointer link link--dia' id="Projects">My Projects Highlight</h2>
             <span className="heading-line" />
             </div>
             <section className="text-gray-400 body-font">
@@ -60,9 +60,9 @@ export const Projects = ({ limit }) => {
                                         </div>
                                     </div>
                                     <div className="mt-4 text-left">
-                                        <h2 className="text-white text-lg font-semibold transition-colors duration-300 group-hover:text-[#f1660abf]">
+                                        <h3 className="text-white text-lg font-semibold transition-colors duration-300 group-hover:text-[#f1660abf]">
                                             {project.title}
-                                        </h2>
+                                        </h3>
                                     </div>
                                 </a>
                             </div>
