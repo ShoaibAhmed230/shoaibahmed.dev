@@ -11,6 +11,7 @@ import { Footer } from '../Components/Footer/Footer'
 import { Contact } from '../Components/Contact/Contact'
 import { ChatWidget } from '../Components/ChatWidget'
 import { ScrollBand } from '../Components/Effects/ScrollBand'
+import { Services } from '../Components/Services/Services'
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -44,6 +45,7 @@ export default function Home() {
             <HeroSection />
             <About />
             <ScrollBand />
+            <Services />
             <Projects limit={3} />
             <Contact />
             <Footer />

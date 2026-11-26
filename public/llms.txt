@@ -19,6 +19,31 @@ Shoaib specializes in React.js, Next.js, WordPress, Magento 2, and Hyvä, buildi
 - Git
 - Technical SEO
 
+## Services
+- React & Next.js development
+- Headless CMS & full-stack apps (Strapi, Supabase)
+- WordPress development with AI (Claude MCP connector)
+- Magento 2 & Hyvä front end
+- Technical SEO & Core Web Vitals
+- HTML email templates
+
+## Projects (case studies)
+- [FlowNotes - Finance Notes Tracker](https://shoaibahmed-dev.vercel.app/projects/flownotes-finance-notes-tracker): A personal finance and notes tracker built with Next.js, TypeScript and Supabase: sign up, write notes, and track earnings against expenses with automatic totals.
+- [SmartStack - Restaurant Website](https://shoaibahmed-dev.vercel.app/projects/smartstack-restaurant-website): A restaurant website built on WordPress with AI and MCP automation: menu, specials, opening hours, team and table-booking flow, assembled largely from prompts.
+- [Oxford Summer Program - Education Website](https://shoaibahmed-dev.vercel.app/projects/oxford-summer-program): The Oxford Summer Program website, a live multilingual education site for international students and families exploring summer courses in Oxford.
+- [Nimbus Pay - Payment Email Template](https://shoaibahmed-dev.vercel.app/projects/nimbus-pay-payment-email): A transactional HTML email for a fintech brand: payment confirmation with amount breakdown, payment progress tracker and dispute information.
+- [TalentVare - Job Portal](https://shoaibahmed-dev.vercel.app/projects/talentvare-job-portal): A job-seeker dashboard built with Next.js and TypeScript: job search by location and type, featured and recommended jobs, interview calendar and profile stats.
+- [BrandMotion - Email Template](https://shoaibahmed-dev.vercel.app/projects/brandmotion-email-template): A branded HTML email that delivers a client's brand kit: logo suite, colour and typography, templates and a single clear download call to action.
+- [The Brand Report - Newsletter](https://shoaibahmed-dev.vercel.app/projects/the-brand-report-newsletter): An editorial HTML newsletter for brand and design teams with a feature article, weekly highlights, tool of the week and quick links.
+- [Jewelicious - Jewelry E-commerce](https://shoaibahmed-dev.vercel.app/projects/jewelicious-jewelry-ecommerce): A multi-page jewelry e-commerce storefront in HTML, CSS and JavaScript with a mega menu, product collections, cart, wishlist and account pages.
+- [App Lab - Software Landing Page](https://shoaibahmed-dev.vercel.app/projects/app-lab-software-landing-page): A software product landing page in HTML and CSS with hero, feature sections, pricing tiers with a monthly/annual toggle, testimonial, FAQ and app-store badges.
+- [iArticle - Resource Platform](https://shoaibahmed-dev.vercel.app/projects/iarticle-resource-platform): A blog and article platform with a Next.js front end and a Strapi headless CMS back end, with Cloudinary for media and Markdown-rendered articles.
+- [Intervention - Consultation Site](https://shoaibahmed-dev.vercel.app/projects/intervention-consultation-site): A consultation website for a care-coordination service for older adults and their families, with service cards, a video section and a validated contact form.
+- [React Todo App](https://shoaibahmed-dev.vercel.app/projects/react-todo-app): A task manager built with React, Vite and Tailwind CSS: add, edit, complete and delete todos, with tasks saved in the browser.
+- [Social Media Dashboard](https://shoaibahmed-dev.vercel.app/projects/social-media-dashboard): A social media feed app in React that loads posts from an API and lets users create and delete posts, with state managed through Context and useReducer.
+- [Real-time Weather App](https://shoaibahmed-dev.vercel.app/projects/real-time-weather-app): A weather app in vanilla JavaScript that fetches live conditions from the OpenWeatherMap API and changes its background video to match the weather.
+- [Molly Pittman - WordPress Site](https://shoaibahmed-dev.vercel.app/projects/molly-pittman-wordpress-site): An "AI-first" personal-brand WordPress website for a marketing educator, with pages for courses, blog, success stories and a book.
+
 ## Links
 - Portfolio: https://shoaibahmed-dev.vercel.app/
 - Contact: shoaib10ahmed10@gmail.com

@@ -1,17 +1,317 @@
 [
-  { "title": "FlowNotes - Finance Notes Tracker", "link": "https://flow-notes-tracker.vercel.app/", "img": "flownotes-thumb-img" },
-  { "title": "SmartStack - Restaurant Website", "link": "https://greenyellow-dogfish-173403.hostingersite.com/", "img": "restaurant-thumb-img" },
-  { "title": "Oxford Summer Program - Education Website", "link": "https://oxfordsummerprogram.com/en", "img": "oxford-thumb-img" },
-  { "title": "Nimbus Pay - Payment Email Template", "link": "https://nimbus-pay-payment-email.vercel.app/", "img": "nimbus-payment" },
-  { "title": "TalentVare - Job Portal", "link": "https://find-job-pi.vercel.app/", "img": "talentvare-thumb-img" },
-  { "title": "BrandMotion - Email Template", "link": "https://brandmotion-email-template.vercel.app/", "img": "brand-motion" },
-  { "title": "The Brand Report - Newsletter", "link": "https://brand-report-newsletter.vercel.app/", "img": "the-brand-report" },
-  { "title": "Jewelicious - Jewelry E-commerce", "link": "https://shoaibahmed230.github.io/jewelry-e-commerce-site/", "img": "jewelry-thumb-img" },
-  { "title": "App Lab - Software Landing Page", "link": "https://connectifysync.com/shoaib/app-lab-website/", "img": "applab-thumb-img" },
-  { "title": "iArticle - Resource Platform", "link": "https://iarticle-website-frontend-rr4d.vercel.app/", "img": "iartical-thumb-img" },
-  { "title": "Intervention - Consultation Site", "link": "https://connectifysync.com/shoaib/Intervention-website/", "img": "intervantion-thumb-img" },
-  { "title": "React Todo App", "link": "https://todo-app-react-vite-taillwind.vercel.app/", "img": "react-todoapp-thumb-img" },
-  { "title": "Social Media Dashboard", "link": "https://social-media-app-orpin-eight.vercel.app/", "img": "socialApp-thumb-img" },
-  { "title": "Real-time Weather App", "link": "https://weather-app-by-js-one.vercel.app/", "img": "weatherapp-thumb-img" },
-  { "title": "Molly Pittman - WordPress Site", "link": "https://floralwhite-gnu-194370.hostingersite.com/", "img": "wordpress-thumb-img" }
+  {
+    "slug": "flownotes-finance-notes-tracker",
+    "title": "FlowNotes - Finance Notes Tracker",
+    "metaTitle": "FlowNotes — Next.js & Supabase Finance Tracker | Shoaib Ahmed",
+    "category": "Web App",
+    "link": "https://flow-notes-tracker.vercel.app/",
+    "repo": "https://github.com/ShoaibAhmed230/Keep-Notes-Project",
+    "img": "flownotes-thumb-img",
+    "stack": ["Next.js", "TypeScript", "React", "Supabase", "Tailwind CSS", "Framer Motion", "Vercel"],
+    "summary": "A personal finance and notes tracker built with Next.js, TypeScript and Supabase: sign up, write notes, and track earnings against expenses with automatic totals.",
+    "overview": [
+      "FlowNotes combines a note-taking app with a lightweight finance tracker. Each user gets a private workspace where notes can hold earning and expense line items, and the app calculates totals and the remaining balance automatically.",
+      "It is built on the Next.js App Router with TypeScript, uses Supabase for authentication and the notes database, and is deployed on Vercel. The interface is styled with Tailwind CSS and animated with Framer Motion."
+    ],
+    "features": [
+      "Email authentication with sign up, login, password reset and an auth callback route (Supabase Auth)",
+      "Create, edit, pin, archive and delete notes, stored per user in Supabase",
+      "Built-in calculator that totals earnings and expenses and shows the remaining balance",
+      "Profile menu and avatar, sidebar navigation and modal note editing",
+      "Typed data layer with a custom useNotes hook"
+    ]
+  },
+  {
+    "slug": "smartstack-restaurant-website",
+    "title": "SmartStack - Restaurant Website",
+    "metaTitle": "SmartStack — WordPress Restaurant Website | Shoaib Ahmed",
+    "category": "WordPress Website",
+    "link": "https://greenyellow-dogfish-173403.hostingersite.com/",
+    "img": "restaurant-thumb-img",
+    "stack": ["WordPress", "Block theme", "Claude MCP connector", "AI-assisted content", "Hostinger"],
+    "summary": "A restaurant website built on WordPress with AI and MCP automation: menu, specials, opening hours, team and table-booking flow, assembled largely from prompts.",
+    "overview": [
+      "SmartStack is a demo restaurant website that shows how WordPress, AI and the Model Context Protocol (MCP) can speed up site building. Pages, sections and content were created and configured through Claude's MCP connector for WordPress, then refined by hand.",
+      "The site uses a modern WordPress block theme and is organised around what diners need: what's on the menu today, when the restaurant is open and how to reserve a table."
+    ],
+    "features": [
+      "Home, About, Blog and Contact pages",
+      "Opening hours, Today's Menu and This Week's Specials sections",
+      "Full menu with dishes and prices",
+      "Our Story, team profiles and a testimonial section",
+      "Clear \"Reserve a Table\" / \"Book a Table\" calls to action leading to the contact page",
+      "Built with AI and MCP automation to cut repetitive manual setup"
+    ]
+  },
+  {
+    "slug": "oxford-summer-program",
+    "title": "Oxford Summer Program - Education Website",
+    "metaTitle": "Oxford Summer Program — Education Website | Shoaib Ahmed",
+    "category": "Education Website",
+    "link": "https://oxfordsummerprogram.com/en",
+    "img": "oxford-thumb-img",
+    "stack": ["Responsive web design", "Multilingual site"],
+    "summary": "The Oxford Summer Program website, a live multilingual education site for international students and families exploring summer courses in Oxford.",
+    "overview": [
+      "Oxford Summer Program is a live education website for international students and their families. The site is multilingual, with language-specific URLs such as the English version at /en."
+    ],
+    "features": [
+      "Multilingual page structure with language-specific URLs",
+      "Responsive layout for mobile, tablet and desktop visitors"
+    ]
+  },
+  {
+    "slug": "nimbus-pay-payment-email",
+    "title": "Nimbus Pay - Payment Email Template",
+    "metaTitle": "Nimbus Pay — HTML Payment Confirmation Email | Shoaib Ahmed",
+    "category": "Email Template",
+    "link": "https://nimbus-pay-payment-email.vercel.app/",
+    "repo": "https://github.com/ShoaibAhmed230/nimbus-pay-payment-email",
+    "img": "nimbus-payment",
+    "stack": ["HTML email", "Inline CSS", "Responsive email design"],
+    "summary": "A transactional HTML email for a fintech brand: payment confirmation with amount breakdown, payment progress tracker and dispute information.",
+    "overview": [
+      "Nimbus Pay is a payment-confirmation email designed for a fictional fintech product. It tells the sender exactly what happened to their money: who received it, how much was charged and where the payment is in its journey.",
+      "Transactional emails have to render consistently across email clients, so the template is hand-coded HTML with inline styles rather than a web framework."
+    ],
+    "features": [
+      "\"Payment Sent\" status with recipient, amount, transaction ID and date",
+      "Payment journey tracker: Sent, Processed, Delivered",
+      "Amount breakdown with processing fee and total",
+      "\"View Receipt\" and \"Track Payment\" calls to action",
+      "Dispute notice, security contact and notification-settings link in the footer"
+    ]
+  },
+  {
+    "slug": "talentvare-job-portal",
+    "title": "TalentVare - Job Portal",
+    "metaTitle": "TalentVare — Next.js Job Portal Dashboard | Shoaib Ahmed",
+    "category": "Web App",
+    "link": "https://find-job-pi.vercel.app/",
+    "repo": "https://github.com/ShoaibAhmed230/find-job",
+    "img": "talentvare-thumb-img",
+    "stack": ["Next.js", "TypeScript", "React", "Tailwind CSS", "Lucide icons", "Vercel"],
+    "summary": "A job-seeker dashboard built with Next.js and TypeScript: job search by location and type, featured and recommended jobs, interview calendar and profile stats.",
+    "overview": [
+      "TalentVare is a job portal front end for job seekers. Instead of a plain listing page it works like a dashboard, bringing search, saved activity and upcoming interviews together in one place.",
+      "It is built with Next.js and TypeScript, styled with Tailwind CSS and deployed on Vercel."
+    ],
+    "features": [
+      "Job search with location and job-type filters",
+      "Featured Jobs and Recommended Jobs lists with Apply Now actions, posting age and applicant counts",
+      "Profile card with profile visitors, resume viewers and saved jobs",
+      "My Calendar with upcoming interviews",
+      "Sidebar navigation for Find Jobs, Top Companies, Job Tracker, Documents, Messages, Notifications and Resume Builder"
+    ]
+  },
+  {
+    "slug": "brandmotion-email-template",
+    "title": "BrandMotion - Email Template",
+    "metaTitle": "BrandMotion — HTML Brand Kit Delivery Email | Shoaib Ahmed",
+    "category": "Email Template",
+    "link": "https://brandmotion-email-template.vercel.app/",
+    "repo": "https://github.com/ShoaibAhmed230/brandmotion-email-template",
+    "img": "brand-motion",
+    "stack": ["HTML email", "Inline CSS", "Responsive email design"],
+    "summary": "A branded HTML email that delivers a client's brand kit: logo suite, colour and typography, templates and a single clear download call to action.",
+    "overview": [
+      "BrandMotion is an email for a design studio delivering a finished brand kit to a client. The goal is a delivery email that feels as polished as the work inside it and makes the next step obvious.",
+      "It is hand-coded HTML with inline styles so it renders reliably across email clients."
+    ],
+    "features": [
+      "Hero image and headline with order reference",
+      "\"What's inside\" cards: logo suite, colour & typography, templates & assets",
+      "Primary \"Download Brand Kit\" button and a reply call to action for edits",
+      "Studio address, social links, unsubscribe and preference links in the footer"
+    ]
+  },
+  {
+    "slug": "the-brand-report-newsletter",
+    "title": "The Brand Report - Newsletter",
+    "metaTitle": "The Brand Report — HTML Newsletter Template | Shoaib Ahmed",
+    "category": "Email Template",
+    "link": "https://brand-report-newsletter.vercel.app/",
+    "repo": "https://github.com/ShoaibAhmed230/brand-report-newsletter",
+    "img": "the-brand-report",
+    "stack": ["HTML email", "Inline CSS", "Responsive email design"],
+    "summary": "An editorial HTML newsletter for brand and design teams with a feature article, weekly highlights, tool of the week and quick links.",
+    "overview": [
+      "The Brand Report is a weekly design newsletter template. It is laid out like a small magazine issue so readers can scan the highlights and jump to what interests them.",
+      "Like the other email projects, it is hand-coded HTML with inline styles for consistent rendering in email clients."
+    ],
+    "features": [
+      "Issue header with issue number and date",
+      "Feature article with call to action",
+      "\"This week's highlights\", \"Tool of the week\" and quick links sections",
+      "View in browser, forward to a friend, social links and unsubscribe"
+    ]
+  },
+  {
+    "slug": "jewelicious-jewelry-ecommerce",
+    "title": "Jewelicious - Jewelry E-commerce",
+    "metaTitle": "Jewelicious — Jewelry E-commerce Website | Shoaib Ahmed",
+    "category": "E-commerce Website",
+    "link": "https://shoaibahmed230.github.io/jewelry-e-commerce-site/",
+    "repo": "https://github.com/ShoaibAhmed230/jewelry-e-commerce-site",
+    "img": "jewelry-thumb-img",
+    "stack": ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
+    "summary": "A multi-page jewelry e-commerce storefront in HTML, CSS and JavaScript with a mega menu, product collections, cart, wishlist and account pages.",
+    "overview": [
+      "Jewelicious is a jewelry store front end covering the pages a real shop needs: browsing by category, collections, cart and wishlist, and customer accounts.",
+      "It is built with plain HTML, CSS and JavaScript and hosted on GitHub Pages."
+    ],
+    "features": [
+      "Multi-level category menu: Women, Men, Kids, Gold, Silver and Diamond",
+      "Homepage slider and collection sections for bangles, earrings, bracelets, rings, nose pins and cufflinks",
+      "Cart, wishlist, login, sign-up, FAQ and contact pages",
+      "Responsive layout"
+    ]
+  },
+  {
+    "slug": "app-lab-software-landing-page",
+    "title": "App Lab - Software Landing Page",
+    "metaTitle": "App Lab — SaaS App Landing Page (HTML & CSS) | Shoaib Ahmed",
+    "category": "Landing Page",
+    "link": "https://connectifysync.com/shoaib/app-lab-website/",
+    "repo": "https://github.com/ShoaibAhmed230/app-lab-html-css",
+    "img": "applab-thumb-img",
+    "stack": ["HTML5", "CSS3", "Responsive design"],
+    "summary": "A software product landing page in HTML and CSS with hero, feature sections, pricing tiers with a monthly/annual toggle, testimonial, FAQ and app-store badges.",
+    "overview": [
+      "App Lab is a marketing landing page for a productivity app. It follows a classic SaaS structure that takes a visitor from the value proposition through features and pricing to download.",
+      "It is built with semantic HTML and CSS and is fully responsive."
+    ],
+    "features": [
+      "Hero with \"Try for free\" and \"Watch demo video\" calls to action",
+      "Logo row and feature sections",
+      "Two pricing tiers with a monthly/annual toggle",
+      "Testimonial, five-question FAQ and Google Play / App Store badges"
+    ]
+  },
+  {
+    "slug": "iarticle-resource-platform",
+    "title": "iArticle - Resource Platform",
+    "metaTitle": "iArticle — Next.js + Strapi Blog Platform | Shoaib Ahmed",
+    "category": "Web App",
+    "link": "https://iarticle-website-frontend-rr4d.vercel.app/",
+    "repo": "https://github.com/ShoaibAhmed230/iarticle-website-frontend",
+    "img": "iartical-thumb-img",
+    "stack": ["Next.js", "React", "Strapi (headless CMS)", "Cloudinary", "React Markdown", "Swiper"],
+    "summary": "A blog and article platform with a Next.js front end and a Strapi headless CMS back end, with Cloudinary for media and Markdown-rendered articles.",
+    "overview": [
+      "iArticle is a content platform for publishing articles. Editors manage content in a Strapi headless CMS, and readers get a fast Next.js front end.",
+      "Media uploads go to Cloudinary through Strapi's upload provider, and article bodies are rendered from Markdown. The front end and back end live in separate repositories."
+    ],
+    "features": [
+      "Next.js front end with Home, Articles (/blog) and About pages",
+      "Strapi headless CMS back end with users and permissions",
+      "Cloudinary media storage",
+      "Markdown article rendering and Swiper carousels",
+      "Contact page and footer with policy and social links"
+    ]
+  },
+  {
+    "slug": "intervention-consultation-site",
+    "title": "Intervention - Consultation Site",
+    "metaTitle": "Intervention — Care Consultation Website | Shoaib Ahmed",
+    "category": "Landing Page",
+    "link": "https://connectifysync.com/shoaib/Intervention-website/",
+    "repo": "https://github.com/ShoaibAhmed230/Intervantion-web",
+    "img": "intervantion-thumb-img",
+    "stack": ["HTML5", "CSS3", "JavaScript", "Form validation"],
+    "summary": "A consultation website for a care-coordination service for older adults and their families, with service cards, a video section and a validated contact form.",
+    "overview": [
+      "Intervention is a marketing site for a service that helps older adults and their families organise care, from needs assessment to aftercare.",
+      "It is built with HTML, CSS and JavaScript, including client-side validation on the lead form."
+    ],
+    "features": [
+      "Hero and \"We Understand\" sections explaining the problem",
+      "Service cards: needs assessment, treatment planning & placement, transportation & logistics, insurance advocacy, employment advocacy and aftercare planning",
+      "\"Watch the video\" section with checklist",
+      "Contact form with required-field validation and country selector"
+    ]
+  },
+  {
+    "slug": "react-todo-app",
+    "title": "React Todo App",
+    "metaTitle": "React Todo App — Vite & Tailwind CSS | Shoaib Ahmed",
+    "category": "Web App",
+    "link": "https://todo-app-react-vite-taillwind.vercel.app/",
+    "repo": "https://github.com/ShoaibAhmed230/Todo-App--reactVite-Taillwind-",
+    "img": "react-todoapp-thumb-img",
+    "stack": ["React", "Vite", "Tailwind CSS", "localStorage", "uuid"],
+    "summary": "A task manager built with React, Vite and Tailwind CSS: add, edit, complete and delete todos, with tasks saved in the browser.",
+    "overview": [
+      "A focused React project covering the core patterns of a CRUD app: controlled inputs, list rendering with stable keys, and state that survives a page refresh.",
+      "Built with React and Vite, styled with Tailwind CSS and deployed on Vercel."
+    ],
+    "features": [
+      "Add, edit and delete tasks",
+      "Mark tasks complete with a checkbox and filter completed items",
+      "Tasks persisted in localStorage",
+      "Unique task IDs with uuid"
+    ]
+  },
+  {
+    "slug": "social-media-dashboard",
+    "title": "Social Media Dashboard",
+    "metaTitle": "Social Media App — React Context & useReducer | Shoaib Ahmed",
+    "category": "Web App",
+    "link": "https://social-media-app-orpin-eight.vercel.app/",
+    "repo": "https://github.com/ShoaibAhmed230/social-media-app",
+    "img": "socialApp-thumb-img",
+    "stack": ["React", "Vite", "Context API", "useReducer", "Bootstrap", "DummyJSON API"],
+    "summary": "A social media feed app in React that loads posts from an API and lets users create and delete posts, with state managed through Context and useReducer.",
+    "overview": [
+      "This project explores state management in React without external libraries. A post-list store built with createContext and useReducer is shared across the app.",
+      "Posts are fetched from the DummyJSON API, and the UI is built with Bootstrap and React Icons."
+    ],
+    "features": [
+      "Post feed loaded from the DummyJSON posts API with a loading spinner",
+      "Create Post form and delete actions (ADD_POST / DELETE_POST reducer actions)",
+      "Sidebar navigation, header, footer and welcome message for an empty feed",
+      "Global state with React Context and useReducer"
+    ]
+  },
+  {
+    "slug": "real-time-weather-app",
+    "title": "Real-time Weather App",
+    "metaTitle": "Weather App — JavaScript & OpenWeatherMap API | Shoaib Ahmed",
+    "category": "Web App",
+    "link": "https://weather-app-by-js-one.vercel.app/",
+    "repo": "https://github.com/ShoaibAhmed230/Weather-App-by-JS",
+    "img": "weatherapp-thumb-img",
+    "stack": ["JavaScript", "HTML5", "CSS3", "OpenWeatherMap API", "Fetch API"],
+    "summary": "A weather app in vanilla JavaScript that fetches live conditions from the OpenWeatherMap API and changes its background video to match the weather.",
+    "overview": [
+      "Search for a city and the app fetches current conditions from the OpenWeatherMap API. The background switches between weather videos so the page reflects the forecast at a glance.",
+      "Built with plain HTML, CSS and JavaScript using the Fetch API."
+    ],
+    "features": [
+      "City search with live data from OpenWeatherMap",
+      "Weather-matched background videos",
+      "Asynchronous requests with the Fetch API",
+      "Responsive layout"
+    ]
+  },
+  {
+    "slug": "molly-pittman-wordpress-site",
+    "title": "Molly Pittman - WordPress Site",
+    "metaTitle": "Personal Brand WordPress Website (AI-First) | Shoaib Ahmed",
+    "category": "WordPress Website",
+    "link": "https://floralwhite-gnu-194370.hostingersite.com/",
+    "img": "wordpress-thumb-img",
+    "stack": ["WordPress", "Block theme", "AI-assisted development", "Hostinger"],
+    "summary": "An \"AI-first\" personal-brand WordPress website for a marketing educator, with pages for courses, blog, success stories and a book.",
+    "overview": [
+      "A personal-brand website concept for a marketing and entrepreneurship educator, built on WordPress with AI-assisted development.",
+      "The site structure is designed around what an educator sells: courses, a book and proof through success stories, supported by a blog."
+    ],
+    "features": [
+      "Home, About, Courses, Blog, Success Stories and Book pages",
+      "Entrepreneurship content section and related-articles area",
+      "Social profile links in the header and footer",
+      "Built with AI-assisted WordPress workflows"
+    ]
+  }
 ]
