@@ -26,3 +26,33 @@
 .nav-link.active::after {
   width: 100%;
 }
+
+/* Mobile: fixed header with a frosted background */
+@media (max-width: 767px) {
+  .site-header {
+    background: rgba(5, 8, 20, 0.82);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .site-header.is-scrolled {
+    border-bottom-color: rgba(241, 102, 10, 0.18);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+  html[data-theme="light"] .site-header {
+    background: rgba(250, 245, 238, 0.85);
+  }
+  html[data-theme="light"] .site-header.is-scrolled {
+    box-shadow: 0 8px 24px rgba(74, 48, 24, 0.12);
+  }
+  /* Smooth hand-off between the logo and the docked avatar */
+  #header-logo,
+  #header-avatar {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+}
+
+/* Hide scrollbars on swipeable rows */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

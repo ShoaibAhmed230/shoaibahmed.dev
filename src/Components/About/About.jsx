@@ -13,6 +13,15 @@ export const About = () => {
                     {/* LEFT CARD - BIO */}
                     <div data-reveal="left" className="lg:w-7/12 flex">
                     <div className="w-full abt-card p-8 md:p-12 text-left relative overflow-hidden group">
+                        {/* Mobile: photo sits at the top of the bio card */}
+                        <div className="lg:hidden flex justify-center mb-8">
+                            <div className="relative">
+                                <div className="absolute -inset-3 border-2 border-[#f1660a]/30 rounded-full animate-pulse" />
+                                <div className="relative w-40 h-40 rounded-full border-4 border-[#f1660a] overflow-hidden shadow-[0_0_40px_rgba(241,102,10,0.3)]">
+                                    <img src={shImg} alt="Shoaib Ahmed, web developer in Karachi" width="160" height="160" loading="lazy" className="w-full h-full object-cover object-top" />
+                                </div>
+                            </div>
+                        </div>
                         <span className="text-[#f1660a] font-medium mb-4 block">👋 Hey, I'm</span>
                         <h2 className="text-white text-4xl md:text-5xl font-bold mb-8">Shoaib Ahmed</h2>
                         
@@ -59,7 +68,7 @@ export const About = () => {
                     </div>
 
                     {/* RIGHT CARD - PROFILE & SHAPES */}
-                    <div data-reveal="right" style={{ "--d": "150ms" }} className="lg:w-5/12 flex">
+                    <div data-reveal="right" style={{ "--d": "150ms" }} className="lg:w-5/12 hidden lg:flex">
                     <div className="w-full abt-card p-8 flex items-center justify-center relative shape-container">
                         {/* Abstract Shapes */}
                         <div className="shape shape-square animate-float top-10 left-10" />

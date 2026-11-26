@@ -8,6 +8,7 @@ const HeroSkeleton = () => {
                 
                 {/* TEXT CONTENT SKELETON */}
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center mb-16 md:mb-0">
+                    <Skeleton className="md:hidden h-28 w-28 rounded-full mb-6" />
                     <Skeleton className="h-6 w-32 mb-4" />
                     <Skeleton className="h-20 w-full md:w-3/4 mb-6" />
                     <Skeleton className="h-8 w-48 mb-8" />
@@ -22,7 +23,7 @@ const HeroSkeleton = () => {
                 </div>
 
                 {/* CODE CARD & BADGES SKELETON */}
-                <div className="lg:w-full md:w-1/2 w-full flex justify-center items-center relative">
+                <div className="lg:w-full md:w-1/2 w-full hidden md:flex justify-center items-center relative">
                     <Skeleton className="absolute top-0 left-10 h-10 w-40 rounded-xl" />
                     <Skeleton className="absolute bottom-10 right-10 h-10 w-36 rounded-xl" />
                     <Skeleton className="w-full max-w-[480px] h-[300px] rounded-2xl" />

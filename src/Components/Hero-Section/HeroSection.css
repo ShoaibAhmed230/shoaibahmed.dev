@@ -298,3 +298,17 @@
   .code-caret { animation: none; opacity: 1; }
   .code-card-glow, .code-card-wrap .tech-badge { animation: none; }
 }
+
+/* Mobile hero photo (docks into the header on scroll, see HeroAvatar.jsx) */
+.hero-avatar-slot {
+  animation: hero-avatar-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-avatar {
+  background: conic-gradient(from 180deg, #f1660a, #fbbf24, #f1660a);
+  box-shadow: 0 0 32px rgba(241, 102, 10, 0.35);
+  transform-origin: center;
+}
+@keyframes hero-avatar-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

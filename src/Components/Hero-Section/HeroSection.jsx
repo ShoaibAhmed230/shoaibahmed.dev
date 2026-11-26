@@ -1,6 +1,7 @@
 import React from 'react';
 import './HeroSection.css'
 import { HeroCodeCard } from './HeroCodeCard'
+import { HeroAvatar } from './HeroAvatar'
 
 const SKILLS = [
   'Web Development',
@@ -36,7 +37,8 @@ export const HeroSection = () => {
       <div className="blur-blob blob-1" />
       <div className="blur-blob blob-2" />
 
-      <div className="container mx-auto flex px-5 lg:flex-row flex-col items-center relative z-10">
+      <div className="container mx-auto flex px-5 lg:flex-row flex-col items-center relative md:z-10">
+        <HeroAvatar />
 
         {/* LEFT SIDE - TEXT CONTENT */}
         <div data-scroll-fade className="w-full lg:flex-grow lg:w-1/2 lg:pr-24 flex flex-col lg:items-start lg:text-left items-center text-center mb-16 lg:mb-0">
@@ -76,7 +78,8 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="lg:w-5/12 w-full flex justify-center lg:justify-end items-center relative overflow-visible">
+        {/* Code card: tablet & desktop only */}
+        <div className="lg:w-5/12 w-full hidden md:flex justify-center lg:justify-end items-center relative overflow-visible">
           <div data-parallax="0.25" className="w-full flex justify-center lg:justify-end">
           <div data-reveal="right" style={{ "--d": "300ms" }} className="w-full flex justify-center lg:justify-end">
             <HeroCodeCard />
