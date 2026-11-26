@@ -41,6 +41,8 @@ const renderPage = (baseHtml, { title, description, url, ogType = 'website', ima
     .replace(/<noscript>\s*<h1>[\s\S]*?<\/noscript>/, `<noscript>\n${body}\n    </noscript>`)
   if (image) {
     html = html.replace(/(<meta (?:property="og|name="twitter):image" content=")[^"]*/g, `$1${image}`)
+      // The default size tags describe the homepage share card, not this image.
+      .replace(/\s*<meta property="og:image:(?:width|height)" content="[^"]*" \/>/g, '')
   }
   return html
 }
