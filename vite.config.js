@@ -9,7 +9,7 @@ const PERSON_NODE = {
   '@type': 'Person',
   '@id': `${SITE_URL}/#person`,
   name: 'Shoaib Ahmed',
-  jobTitle: 'Front-End Web Developer',
+  jobTitle: 'Web Developer',
   url: `${SITE_URL}/`,
   sameAs: ['https://www.linkedin.com/in/shoaib-ahmed-9a2803160/', 'https://github.com/ShoaibAhmed230'],
 }

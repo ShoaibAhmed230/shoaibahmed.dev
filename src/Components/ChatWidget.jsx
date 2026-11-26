@@ -131,7 +131,7 @@ export const ChatWidget = () => {
         <div className="flex items-center justify-between rounded-t-2xl bg-gradient-to-r from-[#f1660a] to-[#d9550a] px-4 py-3">
           <div>
             <p className="text-sm font-semibold text-white">Ask about Shoaib</p>
-            <p className="text-xs text-orange-100">Frontend Developer · React & Next.js</p>
+            <p className="text-xs text-orange-100">Web Developer · React, Next.js & WordPress</p>
           </div>
           <div className="flex items-center gap-1">
             <button

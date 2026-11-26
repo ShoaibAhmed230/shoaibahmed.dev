@@ -11,7 +11,7 @@ const services = [
   {
     title: 'Headless CMS & Full-Stack Apps',
     text: 'Next.js front ends on Strapi or Supabase, with authentication, databases and media storage.',
-    example: { label: 'iArticle (Next.js + Strapi)', slug: 'iarticle-resource-platform' },
+    example: { label: 'Oxford Summer Program (Strapi + Next.js)', slug: 'oxford-summer-program' },
   },
   {
     title: 'WordPress Development with AI',
@@ -19,8 +19,12 @@ const services = [
     example: { label: 'SmartStack restaurant site', slug: 'smartstack-restaurant-website' },
   },
   {
-    title: 'Magento 2 & Hyvä Front End',
+    title: 'Magento 2 & Hyvä Development',
     text: 'E-commerce storefronts on Magento 2 and the Hyvä theme, focused on speed and conversion.',
+  },
+  {
+    title: 'Hosting & Server Management',
+    text: 'WordPress hosting on Hostinger, SiteGround and VentraIP: PHP upgrades, plugin audits, caching, security hardening and site health monitoring.',
   },
   {
     title: 'Technical SEO & Core Web Vitals',
@@ -39,7 +43,7 @@ export const Services = () => {
       <div data-reveal="up" className="text-center mb-10">
         <h2 className="text-white md:text-3xl text-2xl font-bold">What I Do</h2>
         <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
-          Front-end web development for startups, agencies and businesses worldwide, delivered remotely from Karachi, Pakistan.
+          Web development for startups, agencies and businesses worldwide, from front end and CMS to hosting and servers, delivered remotely from Karachi, Pakistan.
         </p>
       </div>
       <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

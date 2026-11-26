@@ -46,16 +46,19 @@
   {
     "slug": "oxford-summer-program",
     "title": "Oxford Summer Program - Education Website",
-    "metaTitle": "Oxford Summer Program — Education Website | Shoaib Ahmed",
+    "metaTitle": "Oxford Summer Program — Strapi + Next.js Website | Shoaib Ahmed",
     "category": "Education Website",
     "link": "https://oxfordsummerprogram.com/en",
     "img": "oxford-thumb-img",
-    "stack": ["Responsive web design", "Multilingual site"],
-    "summary": "The Oxford Summer Program website, a live multilingual education site for international students and families exploring summer courses in Oxford.",
+    "stack": ["Strapi (headless CMS)", "Next.js", "React", "Multilingual content"],
+    "summary": "A multilingual education website for the Oxford Summer Program: I manage the Strapi headless CMS and deliver its content through a Next.js front end.",
     "overview": [
-      "Oxford Summer Program is a live education website for international students and their families. The site is multilingual, with language-specific URLs such as the English version at /en."
+      "Oxford Summer Program is a live education website for international students and their families. The site is multilingual, with language-specific URLs such as the English version at /en.",
+      "My role covers both sides of a headless setup: managing content and structure in the Strapi CMS, and displaying that content on the Next.js front end so updates made in the CMS appear on the live site."
     ],
     "features": [
+      "Strapi headless CMS management: content types, entries and media",
+      "Next.js front end that renders CMS content",
       "Multilingual page structure with language-specific URLs",
       "Responsive layout for mobile, tablet and desktop visitors"
     ]

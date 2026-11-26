@@ -30,7 +30,7 @@ export const Footer = () => {
 
         {/* Footer Bottom */}
         <p className="text-sm text-gray-500">
-          © {new Date().getFullYear()} Shoaib Ahmed — Front-End Web Developer in Karachi, Pakistan
+          © {new Date().getFullYear()} Shoaib Ahmed — Web Developer in Karachi, Pakistan
         </p>
       </div>
     </footer>

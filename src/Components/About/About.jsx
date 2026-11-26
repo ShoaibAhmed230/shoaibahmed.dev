@@ -27,7 +27,7 @@ export const About = () => {
                                     I build fast, user-friendly web apps using React, Next.js, and Tailwind CSS, with a focus on code quality, performance optimization, and clean UI. I've worked on projects ranging from WordPress redesigns to Next.js + Strapi v5 builds.
                                 </p>
                                 <p>
-                                    Beyond development, I handle advanced website maintenance and Technical SEO — PHP upgrades, plugin audits, caching and performance tuning (WP Rocket, PageSpeed/Core Web Vitals), image optimization (WebP), security hardening, GA4/GTM/Search Console setup, and site health monitoring to keep sites fast, secure, and search-ready.
+                                    Beyond development, I manage WordPress hosting and servers on Hostinger, SiteGround and VentraIP, and handle advanced website maintenance and Technical SEO — PHP upgrades, plugin audits, caching and performance tuning (WP Rocket, PageSpeed/Core Web Vitals), image optimization (WebP), security hardening, GA4/GTM/Search Console setup, and site health monitoring to keep sites fast, secure, and search-ready.
                                 </p>
                                 <p>
                                     I pair my expertise with AI tools for research, debugging, and automation — shipping better features faster without cutting corners. This site's chat assistant (bottom-right corner) is one example; feel free to ask it anything about my work.
@@ -74,7 +74,7 @@ export const About = () => {
                             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-[#f1660a] overflow-hidden shadow-[0_0_50px_rgba(241,102,10,0.3)]">
                                 <img 
                                     src={shImg} 
-                                    alt="Shoaib Ahmed, front-end web developer in Karachi" 
+                                    alt="Shoaib Ahmed, web developer in Karachi" 
                                     className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110"
                                 />
                             </div>

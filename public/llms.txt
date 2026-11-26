@@ -1,6 +1,6 @@
 # Shoaib Ahmed
 
-> Front-End Web Developer with 5+ years of experience, based in Karachi, Pakistan.
+> Web Developer with 5+ years of experience, based in Karachi, Pakistan: front end, headless CMS, WordPress, and hosting/server management.
 
 Shoaib specializes in React.js, Next.js, WordPress, Magento 2, and Hyvä, building responsive, high-performance web applications and e-commerce storefronts.
 
@@ -23,14 +23,15 @@ Shoaib specializes in React.js, Next.js, WordPress, Magento 2, and Hyvä, buildi
 - React & Next.js development
 - Headless CMS & full-stack apps (Strapi, Supabase)
 - WordPress development with AI (Claude MCP connector)
-- Magento 2 & Hyvä front end
+- Hosting & server management (Hostinger, SiteGround, VentraIP)
+- Magento 2 & Hyvä development
 - Technical SEO & Core Web Vitals
 - HTML email templates
 
 ## Projects (case studies)
 - [FlowNotes - Finance Notes Tracker](https://shoaibahmed-dev.vercel.app/projects/flownotes-finance-notes-tracker): A personal finance and notes tracker built with Next.js, TypeScript and Supabase: sign up, write notes, and track earnings against expenses with automatic totals.
 - [SmartStack - Restaurant Website](https://shoaibahmed-dev.vercel.app/projects/smartstack-restaurant-website): A restaurant website built on WordPress with AI and MCP automation: menu, specials, opening hours, team and table-booking flow, assembled largely from prompts.
-- [Oxford Summer Program - Education Website](https://shoaibahmed-dev.vercel.app/projects/oxford-summer-program): The Oxford Summer Program website, a live multilingual education site for international students and families exploring summer courses in Oxford.
+- [Oxford Summer Program - Education Website](https://shoaibahmed-dev.vercel.app/projects/oxford-summer-program): A multilingual education website for the Oxford Summer Program: Shoaib manages the Strapi headless CMS and deliver its content through a Next.js front end.
 - [Nimbus Pay - Payment Email Template](https://shoaibahmed-dev.vercel.app/projects/nimbus-pay-payment-email): A transactional HTML email for a fintech brand: payment confirmation with amount breakdown, payment progress tracker and dispute information.
 - [TalentVare - Job Portal](https://shoaibahmed-dev.vercel.app/projects/talentvare-job-portal): A job-seeker dashboard built with Next.js and TypeScript: job search by location and type, featured and recommended jobs, interview calendar and profile stats.
 - [BrandMotion - Email Template](https://shoaibahmed-dev.vercel.app/projects/brandmotion-email-template): A branded HTML email that delivers a client's brand kit: logo suite, colour and typography, templates and a single clear download call to action.
