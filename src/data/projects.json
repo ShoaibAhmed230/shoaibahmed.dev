@@ -1,0 +1,17 @@
+[
+  { "title": "FlowNotes - Finance Notes Tracker", "link": "https://flow-notes-tracker.vercel.app/", "img": "flownotes-thumb-img" },
+  { "title": "SmartStack - Restaurant Website", "link": "https://greenyellow-dogfish-173403.hostingersite.com/", "img": "restaurant-thumb-img" },
+  { "title": "Oxford Summer Program - Education Website", "link": "https://oxfordsummerprogram.com/en", "img": "oxford-thumb-img" },
+  { "title": "Nimbus Pay - Payment Email Template", "link": "https://nimbus-pay-payment-email.vercel.app/", "img": "nimbus-payment" },
+  { "title": "TalentVare - Job Portal", "link": "https://find-job-pi.vercel.app/", "img": "talentvare-thumb-img" },
+  { "title": "BrandMotion - Email Template", "link": "https://brandmotion-email-template.vercel.app/", "img": "brand-motion" },
+  { "title": "The Brand Report - Newsletter", "link": "https://brand-report-newsletter.vercel.app/", "img": "the-brand-report" },
+  { "title": "Jewelicious - Jewelry E-commerce", "link": "https://shoaibahmed230.github.io/jewelry-e-commerce-site/", "img": "jewelry-thumb-img" },
+  { "title": "App Lab - Software Landing Page", "link": "https://connectifysync.com/shoaib/app-lab-website/", "img": "applab-thumb-img" },
+  { "title": "iArticle - Resource Platform", "link": "https://iarticle-website-frontend-rr4d.vercel.app/", "img": "iartical-thumb-img" },
+  { "title": "Intervention - Consultation Site", "link": "https://connectifysync.com/shoaib/Intervention-website/", "img": "intervantion-thumb-img" },
+  { "title": "React Todo App", "link": "https://todo-app-react-vite-taillwind.vercel.app/", "img": "react-todoapp-thumb-img" },
+  { "title": "Social Media Dashboard", "link": "https://social-media-app-orpin-eight.vercel.app/", "img": "socialApp-thumb-img" },
+  { "title": "Real-time Weather App", "link": "https://weather-app-by-js-one.vercel.app/", "img": "weatherapp-thumb-img" },
+  { "title": "Molly Pittman - WordPress Site", "link": "https://floralwhite-gnu-194370.hostingersite.com/", "img": "wordpress-thumb-img" }
+]

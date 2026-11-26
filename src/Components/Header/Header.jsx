@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/Images/logo.png';
+import logo from '../../assets/Images/logo.webp';
 import './Header.css';
 import { ThemeToggle } from '../Theme/ThemeToggle';
 
@@ -38,6 +38,8 @@ export const Header = () => {
           <img
             src={logo}
             alt="Shoaib Ahmed logo"
+            width="246"
+            height="96"
             className="h-10 md:h-12 w-auto"
           />
         </Link>
